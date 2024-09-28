@@ -1,0 +1,10 @@
+{
+    "name": "admin/atividade-com-composer-php",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
