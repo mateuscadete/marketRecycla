@@ -1,1 +1,0 @@
-console.log('Vai toma no cu');
