@@ -28,7 +28,7 @@ body {
 }
 
 .overlay {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -51,6 +51,7 @@ body {
     font-size: 1.5rem;
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.5s, transform 0.5s; /* Transição suave */
+    display: flex;
 }
 
 .image-container:hover .caption {
