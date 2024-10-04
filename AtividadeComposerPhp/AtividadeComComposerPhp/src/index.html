@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="Style/css.css"> <!-- Link para seu CSS -->
     <title>Meu Site</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button type="button" class="btn btn-link text-light mr-2">
@@ -31,7 +30,7 @@
             </ul>
 
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 300px;">
+                <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
 
@@ -46,20 +45,42 @@
             </div>
 
             <a href="cadastro.html">
-                <button type="button" class="btn btn-link text-light ml-3">
-                    <img src="imagens/Generic avatar.png" alt="Perfil" class="img-fluid">
-                </button>
+                <div class="perfil">
+                    <button type="button" class="btn btn-link text-light ml-3">
+                        <img src="imagens/Generic avatar.png" alt="Perfil" class="img-fluid">
+                    </button>
+                </div>
             </a>
         </div>
     </nav>
 
-    <div>
+    <div class="container-fluid">
         <div class="d-flex no-gutters">
-            <img src="imagens/Plastico.png" width="20%" alt="Plástico" class="img-fluid">
-            <img src="imagens/Vidro.png"    width="20%" alt="Vidro" class="img-fluid">
-            <img src="imagens/Metal.png"    width="20%" alt="Metal" class="img-fluid">
-            <img src="imagens/Papel.png"    width="20%" alt="Papel" class="img-fluid">
-            <img src="imagens/Eletronicos.png" width="20%" alt="Eletrônicos" class="img-fluid">
+            <div class="image-container">
+                <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="caption">Plástico</div>
+            </div>
+            <div class="image-container">
+                <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="caption">Vidro</div>
+            </div>
+            <div class="image-container">
+                <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="caption">Metal</div>
+            </div>
+            <div class="image-container">
+                <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="caption">Papel</div>
+            </div>
+            <div class="image-container">
+                <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
+                <div class="overlay"></div>
+                <div class="caption">Eletrônicos</div>
+            </div>
         </div>
     </div>
 
