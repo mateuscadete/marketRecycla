@@ -8,12 +8,13 @@
     <title>Meu Site</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="imagens/menu.png" alt="menu" class="img-fluid">
         </button>
         <a class="navbar-brand" href="principal.html">MarketRecycla</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,62 +30,135 @@
                 </li>
             </ul>
 
-            <form class="form-inline my-2 my-lg-0" style="width: 20%; display: flex; align-items: center; white-space: nowrap;">
-                <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" style="flex: 1; min-width: 0;">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
-            
 
             <div class="btn-group mx-3" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-link text-light">Compras Recorrentes</button>
                 <button type="button" class="btn btn-link text-light">
                     <img src="imagens/Shopping cart.png" alt="Carrinho" class="img-fluid">
                 </button>
-                <button type="button" class="btn btn-link text-light">
-                    <img src="imagens/Share.png" alt="Compartilhar" class="img-fluid">
-                </button>
+                <div class="btn-group mx-3" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-link text-light">Compras Recorrentes</button>
+                    <a href="cadastro.html">
+                    <button type="button" class="btn btn-outline-success my-2 my-sm-0" style="margin-left: 10px;">Cadastrar</button>
+                </div>
             </div>
-
-            <a href="cadastro.html">
+                 </a>
+                 <a href="login.html">
                 <div class="perfil">
                     <button type="button" class="btn btn-link text-light ml-3">
                         <img src="imagens/Generic avatar.png" alt="Perfil" class="img-fluid">
                     </button>
                 </div>
-            </a>
+           </a>
         </div>
     </nav>
+
     <main>
-    <div class="container-fluid">
-        <div class="d-flex no-gutters">
-            <div class="image-container">
-                <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
-                <div class="overlay"></div>
-                <div class="caption">Plástico</div>
-            </div>
-            <div class="image-container">
-                <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
-                <div class="overlay"></div>
-                <div class="caption">Vidro</div>
-            </div>
-            <div class="image-container">
-                <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
-                <div class="overlay"></div>
-                <div class="caption">Metal</div>
-            </div>
-            <div class="image-container">
-                <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
-                <div class="overlay"></div>
-                <div class="caption">Papel</div>
-            </div>
-            <div class="image-container">
-                <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
-                <div class="overlay"></div>
-                <div class="caption">Eletrônicos</div>
+        <div class="container-fluid">
+            <div class="d-flex no-gutters">
+                <div class="image-container">
+                    <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
+                    <div class="overlay"></div>
+                    <div class="caption">Plástico</div>
+                </div>
+                <div class="image-container">
+                    <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
+                    <div class="overlay"></div>
+                    <div class="caption">Vidro</div>
+                </div>
+                <div class="image-container">
+                    <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
+                    <div class="overlay"></div>
+                    <div class="caption">Metal</div>
+                </div>
+                <div class="image-container">
+                    <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
+                    <div class="overlay"></div>
+                    <div class="caption">Papel</div>
+                </div>
+                <div class="image-container">
+                    <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
+                    <div class="overlay"></div>
+                    <div class="caption">Eletrônicos</div>
+                </div>
             </div>
         </div>
-    </div>
-</main>
+
+        <section class="info-section my-5">
+            <div class="container text-center">
+                <h2>Transforme Lixo em Lucro com a MarketRecycla!</h2>
+                <p>Já pensou em como seus itens recicláveis podem gerar uma renda extra? Na MarketRecycla, tornamos isso possível! Nossa plataforma foi criada para facilitar a venda de materiais recicláveis, permitindo que você transforme aquilo que não usa mais em lucro.</p>
+
+                <h3 class="highlight">Por que escolher a MarketRecycla?</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <h4 class="highlight">Simplicidade</h4>
+                            <p>Nosso site oferece uma interface fácil de usar, onde você pode listar seus itens recicláveis com apenas alguns cliques.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <h4 class="highlight">Renda Extra</h4>
+                            <p>Aproveite a oportunidade de ganhar dinheiro com materiais que antes eram apenas lixo.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <h4 class="highlight">Sustentabilidade</h4>
+                            <p>Contribua para a preservação do meio ambiente, reduzindo a quantidade de resíduos e promovendo a reciclagem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="highlight">Nossa Missão: Facilitar!</h3>
+                <p>Na MarketRecycla, acreditamos que a reciclagem deve ser acessível a todos. Nossa missão é conectar pessoas que querem vender seus recicláveis com aqueles que buscam comprá-los, criando uma comunidade que valoriza a sustentabilidade e a economia circular.</p>
+
+                <p>Junte-se a nós e faça parte dessa mudança! Visite nosso site e comece a transformar o seu lixo em lucro hoje mesmo.</p>
+            </div>
+        </section>
+
+        <section class="creators-section my-5">
+            <div class="container text-center">
+                <h2>Nossos Criadores</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="creator-card">
+                            <img src="imagens/Pietro.png" alt="Criador 1" class="img-fluid">
+                            <h4>Pietro</h4>
+                            <p>Desenvolvedor Front-end</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="creator-card">
+                            <img src="imagens/Joel.png" alt="Criador 2" class="img-fluid">
+                            <h4>Joel</h4>
+                            <p>Descrição do Criador 2.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="creator-card">
+                            <img src="imagens/Gabriel.png" alt="Criador 3" class="img-fluid">
+                            <h4>Gabriel</h4>
+                            <p>Descrição do Criador 3.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="creator-card">
+                            <img src="imagens/Matheus.png" alt="Criador 4" class="img-fluid">
+                            <h4>Matheus</h4>
+                            <p>Descrição do Criador 4.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
