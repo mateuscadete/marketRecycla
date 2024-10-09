@@ -10,9 +10,6 @@ class Login {
     private $senha;
 
     public function __construct($usuario, $senha) {
-        if (empty($usuario) || empty($senha)) {
-            throw new \InvalidArgumentException('Usuário e senha são obrigatórios.');
-        }
         
         $this->usuario = $usuario;
         $this->senha = $senha;

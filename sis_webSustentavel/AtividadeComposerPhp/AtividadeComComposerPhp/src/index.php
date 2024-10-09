@@ -29,9 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST" action="">
             <input type="text" name=" Usuario" placeholder=" Usuario" required>
             <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">cadastrar</button>
+            <button type="submit">Entrar</button>
             <br><br>
-        </form>
+            <a href="cadastro.php">fazer Cadastro </a>   
+             </form>
         <?php if ($mensagem): ?>
             <div class="message <?php echo strpos($mensagem, 'sucesso') !== false ? 'success' : 'error'; ?>">
                 <?php echo htmlspecialchars($mensagem); ?>
