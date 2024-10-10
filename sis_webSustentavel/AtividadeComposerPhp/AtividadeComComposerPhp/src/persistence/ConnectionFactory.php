@@ -9,12 +9,26 @@ class ConnectionFactory {
 //singleton
 private static $connection = null;
   
-public static function getConnection(): PDO {
+public static function getConnection() {
+    error_reporting(E_ALL);
+    ini_set('display_errors',1);
  
 if (self::$connection == null){
-$dnsStr = "mysql:host=localhost;dbname=dn_name";
- self::$connection = new \PDO($dnsStr, "admin","admin123");
- self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $host = getenv('DB_HOST') ?: 'localhost';
+    $dbname = getenv('DB_NAME') ?: 'db_name';
+    $username = getenv('DB_USER') ?: 'root';
+    $password = getenv('DB_PASS') ?: '';
+    $dsn = "mysql:host=$host;dbname=$dbname";
+
+    try{
+        self::$connection = new \PDO("mysql:host=localhost;dbname=db_name", $username, $password);
+
+        self::$connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    }
+    catch(\PDOExpection $e){
+
+        die('Connection failed:' . $e->getMessage());
+    }
 } 
 return self::$connection;
     }
