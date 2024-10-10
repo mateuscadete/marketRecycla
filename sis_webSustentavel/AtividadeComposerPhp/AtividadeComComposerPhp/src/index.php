@@ -19,24 +19,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="view/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Login</title>
+    
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
+
+
+    
+       
         <form method="POST" action="">
-            <input type="text" name=" Usuario" placeholder=" Usuario" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+        <h2>Login</h2>    
+        
+        <div class="input">
+        <input type="text" name=" Usuario" placeholder="Insira seu nome" required>
+        </div>
+
+        <div class="input">
+        <input type="password" name="senha" placeholder="Insira sua senha" required>
+</div>
+
+        <button class="cadastrar" type="submit">Entrar</button>
             <br><br>
-            <a href="cadastro.php">fazer Cadastro </a>   
+        
+            <a href="cadastro.php">Fazer Cadastro </a>   
              </form>
         <?php if ($mensagem): ?>
             <div class="message <?php echo strpos($mensagem, 'sucesso') !== false ? 'success' : 'error'; ?>">
                 <?php echo htmlspecialchars($mensagem); ?>
-            </div>
+                </div>
         <?php endif; ?>
     </div>
 </body>
