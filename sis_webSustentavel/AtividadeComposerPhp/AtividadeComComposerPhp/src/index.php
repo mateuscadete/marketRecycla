@@ -32,13 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST" action="">
         <h2>Login</h2>    
         
-        <div class="input">
+        
         <input type="text" name=" Usuario" placeholder="Insira seu nome" required>
-        </div>
-
-        <div class="input">
+        
+<br><br>
+        
         <input type="password" name="senha" placeholder="Insira sua senha" required>
-</div>
+
 
         <button class="cadastrar" type="submit">Entrar</button>
             <br><br>
