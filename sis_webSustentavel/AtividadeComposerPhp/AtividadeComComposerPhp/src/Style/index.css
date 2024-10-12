@@ -1,12 +1,10 @@
-
-
-form {
+.login {
     background-color: #403D36;
     border: 1px solid gray;
     border-radius: 8px;
     padding: 40px 30px;
     width: 350px;
-    height: 450px;
+    height: 510px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-top: 90px;
@@ -25,10 +23,12 @@ body {
 }
 
 h2 {
+    font-weight: normal;
     color: white;
+    font-size: 24px;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    
+
 
 
 }
