@@ -43,14 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="principal.html">Home</a>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contatos.html">Contato</a>
+                    <a class="nav-link" href="#">Contato</a>
                 </li>
             </ul>
 
@@ -85,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST" action="">
             <input type="text" name="nome" placeholder="Insira o nome do Produto" required>
             <input type="text" name="email" placeholder="Insira a quantidade do produto" required>
-            <input type="text" name="cpf" placeholder="Insira sua descrição" required>
+            <input type="text" name="cpf"  placeholder="Insira sua descrição" required >
             <button type="submit">Cadastrar Produto</button>
         </form>
     </div>
