@@ -5,7 +5,7 @@ use App\persistence\ConnectionFactory;
 use PDO;
 use PDOException;
 
-class Cadastro_Produto {
+class Produto {
     private $nome;
     private $qtd;
     private $descricao;
@@ -19,7 +19,7 @@ class Cadastro_Produto {
         $this->descricao= $descricao;
     }
 
-    public function cadastrar() {
+    public function cadastrar_produto() {
         try {
             $pdo = ConnectionFactory::getConnection();
             // Prepara a consulta para inserir o novo usuário

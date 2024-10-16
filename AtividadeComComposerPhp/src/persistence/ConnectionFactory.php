@@ -14,7 +14,7 @@ public static function getConnection() {
     ini_set('display_errors',1);
  
 if (self::$connection == null){
-    $host = getenv('DB_HOST') ?: 'localhost';
+    $host = getenv('DB_HOST') ?: '127.0.0.1';
     $dbname = getenv('DB_NAME') ?: 'db_name';
     $username = getenv('DB_USER') ?: 'root';
     $password = getenv('DB_PASS') ?: '';

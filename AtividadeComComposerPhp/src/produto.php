@@ -1,21 +1,20 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use App\model\Cadastro;
+use App\model\Produto;
 
 $mensagem = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $usuario = $_POST['nome'] ?? '';
-    $senha = $_POST['senha'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $cpf = $_POST['cpf'] ?? '';
+    $nome = $_POST['nome'] ?? '';
+    $qtd = $_POST['qtd'] ?? '';
+    $descricao= $_POST['descricao'] ?? '';
 
    
-    $user = new Cadastro($usuario, $senha, $email, $cpf);
+    $user = new Produto($nome, $qtd, $descricao);
 
   
-    $mensagem = $user->cadastrar();
+    $mensagem = $user->cadastrar_produto();
 }
 ?>
 <!DOCTYPE html>
@@ -82,8 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Cadastre o Produto</h2>
         <form method="POST" action="">
             <input type="text" name="nome" placeholder="Insira o nome do Produto" required>
-            <input type="text" name="email" placeholder="Insira a quantidade do produto" required>
-            <input type="text" name="cpf"  placeholder="Insira sua descrição" required >
+            <input type="text" name="qtd" placeholder="Insira a quantidade do produto" required>
+            <input type="text" name="descricao"  placeholder="Insira sua descrição" required >
             <button type="submit">Cadastrar Produto</button>
         </form>
     </div>
