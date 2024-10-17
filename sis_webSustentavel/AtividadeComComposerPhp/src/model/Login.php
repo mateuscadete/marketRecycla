@@ -30,8 +30,9 @@ class Login {
             $senha = htmlspecialchars(trim($_POST["senha"])); // Captura a senha
     
             // Prepare a consulta para buscar o usuário
-            $stmt = $this->pdo->prepare("SELECT * FROM usuario WHERE nome = :nome");
-            $stmt->bindParam(":nome", $nome);
+            $stmt = $this->pdo->prepare("SELECT * FROM usuario WHERE nome = :nome AND senha = :senha");
+            $stmt->bindParam(':nome', $nome);
+            $stmt->bindParam(':senha', $senha);
             $stmt->execute();
     
             // Verifica se o usuário existe
@@ -43,14 +44,13 @@ class Login {
     
                 // Verifica a senha usando password_verify
                 if (password_verify($senha, $result['senha'])) {
-                    header("Location: principal.html");
-                    exit();
+                    
                 } else {
                     header("Location: principal.html");
                     exit();
                 }
             } else {
-                echo "<h3 style='color: red; font-size: 20px;'>Usuário não encontrado!</h3>";
+                echo "<h3 style='color: red; font-size: 20px;'>Usuário ou senha incorretos</h3>";
             }
         }
     }

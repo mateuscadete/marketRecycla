@@ -33,9 +33,10 @@ class Cadastro {
             $stmt->execute();
 
 
-            return 'Usuário cadastrado com sucesso!';
+            header("Location:principal.html");
+            exit;
         } catch (PDOException $e) {
             return 'Erro ao cadastrar usuário: ' . $e->getMessage();
         }
-    }
+    }   
 }
