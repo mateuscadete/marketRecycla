@@ -1,37 +1,16 @@
-<?php
-require_once '../vendor/autoload.php';
-
-use App\model\Cadastro;
-
-$mensagem = '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $usuario = $_POST['nome'] ?? '';
-    $senha = $_POST['senha'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $cpf = $_POST['cpf'] ?? '';
-
-   
-    $user = new Cadastro($usuario, $senha, $email, $cpf);
-
-  
-    $mensagem = $user->cadastrar();
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Style/cadastro.css">
-    <!-- Adicionando o Bootstrap -->
+    <link rel="stylesheet" href="Style/contato.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+
+
+    <title>Contato - MarketRecycla</title>
 </head>
 
 <body>
-    <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="imagens/menu.png" alt="menu" class="img-fluid">
@@ -46,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li class="nav-item active">
                     <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
-                
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="contatos.html">Contato</a>
                 </li>
             </ul>
 
@@ -77,31 +56,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </nav>
 
-    <!-- Formulário de Cadastro -->
-    <div class="login-container" style="margin-top: 80px;"> <!-- Ajustando a margem superior para dar espaço ao nav -->
-        <h2>Criar sua conta</h2>
-        <form method="POST" action="">
-            <input type="text" name="nome" placeholder="Insira seu nome" required>
-            <input type="text" name="email" placeholder="Insira seu email" required>
-            <input type="text" name="cpf" placeholder="Insira seu CPF" required>
-            <input type="password" name="senha" placeholder="Crie uma senha" required>
-            <button type="submit">Cadastrar</button>
-        </form>
-        <div class="options">
-            <a href="index.php">Fazer login</a>
-        </div>
-    </div>
+    <form class="contato">
 
-    <!-- Adicionando o Bootstrap JS -->
+        <h1>Entre em contato</h1>
+
+        <input type="text" id="nomeid" placeholder="Insira o seu nome" required="required" name="nome" />
+        <label for="nome">Nome</label>
+        <br>
+        <input type="tel" id="foneid" placeholder="Insira seu numero" name="fone" />
+        <label for="fone">Telefone</label>
+        <br>
+        <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
+        <label for="email">Email</label>
+        <br>
+        <textarea placeholder="Deixe sua mensagem"></textarea>
+
+        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+    </form>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <?php if ($mensagem): ?>
-            <div class="message <?php echo strpos($mensagem, 'sucesso') !== false ? 'success' : 'error'; ?>">
-                <?php echo htmlspecialchars($mensagem); ?>
-            </div>
-        <?php endif; ?>
-    </div>
 </body>
 
 </html>

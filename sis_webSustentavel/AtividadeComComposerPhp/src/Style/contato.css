@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../imagens/Fundo.png');
+    background-size: cover;
+}
+
+.contato {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #403D36;
+    max-width: 500px;
+    padding: 10px;
+
+    border: rgb(54, 122, 54) double 2px;
+    border-radius: 5px;
+
+
+    h1 {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        color: green;
+        text-shadow: 3px 3px 3px black;
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        width: 200px;
+        padding: 10px;
+        color: green;
+        margin-left: 20px;
+        margin-top: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border: 1px solid;
+    }
+
+    input:hover,
+    textarea:hover,
+    input:focus,
+    textarea:focus {
+        border-color: green;
+        background-color: rgb(54, 122, 54);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+
+    .enviar {
+        background-color: green;
+        height: 40px;
+        width: 100px;
+        font-weight: bold;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border: 1px solid;
+        color: black;
+    }
+
+    textarea {
+        width: 400px;
+        height: 120px;
+        line-height: 20px;
+        max-width: 400px;
+    }
+
+    form label {
+        margin-left: 20px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    label {
+        color: white;
+    }
