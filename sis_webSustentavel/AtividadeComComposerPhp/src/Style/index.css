@@ -1,3 +1,8 @@
+@font-face {
+    font-family: league ;
+    src: url(LeagueSpartan-VariableFont_wght.ttf);
+}
+
 .login {
     background-color: #403D36;
     border: 1px solid gray;
@@ -12,7 +17,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: league;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;

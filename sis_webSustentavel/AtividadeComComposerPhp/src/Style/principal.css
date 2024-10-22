@@ -1,5 +1,11 @@
+@font-face {
+    font-family: league ;
+    src: url(LeagueSpartan-VariableFont_wght.ttf);
+}
+
 body {
     background-color: #FFF4ED; /* Cor de fundo */
+    font-family: league;
 }
 
 .container-fluid {
