@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Style/Produtos/plastico.css"> <!-- Link para seu CSS -->
+    <link rel="stylesheet" href="Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
     <title>MarketRecycla</title>
 </head>
 
@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="imagens/menu.png" alt="menu" class="img-fluid">
         </button>
-        <a class="navbar-brand" href="principal.html">MarketRecycla</a>
+        <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
 
 
                 <div class="image-container">
-                    <a href="plastico.html">
+                    <a href="plastico.php">
                         <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Plástico</div>
@@ -72,7 +72,7 @@
 
 
                 <div class="image-container">
-                    <a href="vidro.html">
+                    <a href="vidro.php">
                         <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Vidro</div>
@@ -81,7 +81,7 @@
 
 
                 <div class="image-container">
-                    <a href="aluminio.html">
+                    <a href="aluminio.php">
                         <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Metal</div>
@@ -90,7 +90,7 @@
 
 
                 <div class="image-container">
-                    <a href="papel.html">
+                    <a href="papel.php">
                         <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Papel</div>
@@ -99,7 +99,7 @@
 
 
                 <div class="image-container">
-                    <a href="eletronicos.html">
+                    <a href="eletronicos.php">
                         <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Eletrônicos</div>
@@ -111,30 +111,27 @@
     </main>
 
     <aside>
-        <h2>Plásticos</h3>
+        <h2>Eletrônicos e Metais</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li style="font-weight: bold;">Polietileno Tereftalato (PET)</li>
-            <li>Polietileno de Alta Densidade (PEAD)</li>
-            <li>Polietileno de Vinila (PVC)</li>
-            <li>Polipropileno</li>
-            <li>Poliestireno</li>
+            <li style="font-weight: bold;">Aço</li>
+            <li>Cobre</li>
+            <li>Lata de Ferro</li>
+            <li>Metal Preto</li>
+            <li>Liga de Metais</li>
+            <li>Eletrônicos</li>
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="imagens/garrafapet.jfif">
+        <img class="garrafa" src="imagens/lixeriametal.jpg">
 
-        <p class="descrição">Garrafa PET 1,5L</p>
+        <p class="descrição">Lixeira 50L Lata de Lixo Americana Aço Galvanizado</p>
 
-        <p class="preço">R$ 16, <sub>99</sub></p>
+        <p class="preço">R$ 270,<sub>00</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
 
-        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+        <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
     </div>
-
-    <footer></footer>
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

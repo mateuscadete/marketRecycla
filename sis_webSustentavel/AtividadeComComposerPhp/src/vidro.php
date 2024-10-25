@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="imagens/menu.png" alt="menu" class="img-fluid">
         </button>
-        <a class="navbar-brand" href="principal.html">MarketRecycla</a>
+        <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
 
 
                 <div class="image-container">
-                    <a href="plastico.html">
+                    <a href="plastico.php">
                         <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Plástico</div>
@@ -72,7 +72,7 @@
 
 
                 <div class="image-container">
-                    <a href="vidro.html">
+                    <a href="vidro.php">
                         <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Vidro</div>
@@ -81,7 +81,7 @@
 
 
                 <div class="image-container">
-                    <a href="aluminio.html">
+                    <a href="aluminio.php">
                         <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Metal</div>
@@ -90,7 +90,7 @@
 
 
                 <div class="image-container">
-                    <a href="papel.html">
+                    <a href="papel.php">
                         <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Papel</div>
@@ -99,7 +99,7 @@
 
 
                 <div class="image-container">
-                    <a href="eletronicos.html">
+                    <a href="eletronicos.php">
                         <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Eletrônicos</div>
