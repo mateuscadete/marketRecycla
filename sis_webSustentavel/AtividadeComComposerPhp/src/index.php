@@ -41,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul class="navbar-nav mr-auto">
                
                 <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
+                    <a class="nav-link" href="sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>
             </ul>
 
@@ -54,12 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
 
             <div class="btn-group mx-3" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-link text-light">Compras Recorrentes</button>
-                <a href="produto.php">
+            <a href="produto.php">    
+            <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
+            </a>
+                
                     <button type="button" class="btn btn-link text-light">
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
-                    </button></a>
+                    </button>
 
             </div>
 
