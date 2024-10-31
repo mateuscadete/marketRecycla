@@ -83,7 +83,7 @@
                     <a href="aluminio.php">
                         <img src="../imagens/Metal.png" alt="Metal" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Metal</div>
+                        <div class="caption">Alumínio</div>
                 </div>
                 </a>
 

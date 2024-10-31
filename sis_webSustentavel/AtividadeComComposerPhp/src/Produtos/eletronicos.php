@@ -111,18 +111,18 @@
     <aside>
         <h2>Eletrônicos e Metais</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li style="font-weight: bold;">Aço</li>
-            <li>Cobre</li>
-            <li>Lata de Ferro</li>
-            <li>Metal Preto</li>
-            <li>Liga de Metais</li>
-            <li>Eletrônicos</li>
+            <a href="#"><li style="font-weight: bold;">Aço</li></a>
+            <a href="#"><li>Cobre</li></a>
+            <a href="#"><li>Lata de Ferro</li></a>
+            <a href="#"><li>Metal Preto</li></a>
+            <a href="#"><li>Liga de Metais</li></a>
+            <a href="#"><li>Eletrônicos</li></a>
     </aside>
 
     <div class="produto">
         <img class="garrafa" src="../imagens/lixeriametal.jpg">
 
-        <p class="descrição">Lixeira 50L Lata de Lixo Americana Aço Galvanizado</p>
+        <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 
         <p class="preço">R$ 270,<sub>00</sub></p>
 

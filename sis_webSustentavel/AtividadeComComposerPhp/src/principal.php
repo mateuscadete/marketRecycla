@@ -1,10 +1,4 @@
-<?php
-include'aluminio.php';
-include'plastico.php';
-include'vidro';
-include'papel.php';
-include'eletronicos.php';
-?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

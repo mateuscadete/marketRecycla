@@ -123,7 +123,7 @@
     <div class="produto">
         <img class="garrafa" src="../imagens/aluminio.jfif">
 
-        <p class="descrição">Embalgem de Alumínio D5 c/ tampa 1150ml-5un</p>
+        <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
 
         <p class="preço">R$ 10,<sub>95</sub></p>
 

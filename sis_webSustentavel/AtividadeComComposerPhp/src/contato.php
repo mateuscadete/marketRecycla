@@ -64,15 +64,15 @@
 
         <input type="text" id="nomeid" placeholder="Insira o seu nome" required="required" name="nome" />
         <label for="nome">Nome</label>
-        <br>
+        <br><br>
         <input type="tel" id="foneid" placeholder="Insira seu numero" name="fone" />
         <label for="fone">Telefone</label>
-        <br>
+        <br><br>
         <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
         <label for="email">Email</label>
-        <br>
+        <br><br>
         <textarea placeholder="Deixe sua mensagem"></textarea>
-
+<br><br>
         <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
     </form>
 
