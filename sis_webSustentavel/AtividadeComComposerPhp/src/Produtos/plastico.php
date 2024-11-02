@@ -112,11 +112,28 @@
     <aside>
         <h2>Plásticos</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li style="font-weight: bold;">Polietileno Tereftalato (PET)</li>
-            <li>Polietileno de Alta Densidade (PEAD)</li>
-            <li>Polietileno de Vinila (PVC)</li>
-            <li>Polipropileno</li>
-            <li>Poliestireno</li>
+            <a href="#"><li style="font-weight: bold;">Polietileno Tereftalato (PET)</li></a>
+            <a href="#"><li>Polietileno de Alta Densidade (PEAD)</li></a>
+            <a href="#"><li>Polietileno de Vinila (PVC)</li></a>
+            <a href="#"><li>Polipropileno</li></a>
+            <a href="#"><li>Poliestireno</li></a>
+            
+            <div class="container">
+        <h2>Preço Max</h2>
+        <div id="preco">R$ 100,00</div>
+        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
+    </div>
+
+    <script>
+        const precoDisplay = document.getElementById("preco");
+        const precoSlider = document.getElementById("precoSlider");
+
+        precoSlider.addEventListener("input", function() {
+            let valor = precoSlider.value;
+            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
+        });
+    </script>
+
     </aside>
 
     <div class="produto">

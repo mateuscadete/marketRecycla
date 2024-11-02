@@ -110,12 +110,30 @@
     </main>
 
     <aside>
-        <h2>Vidros</h3>
+        <h2>Vidros</h2>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li>Vidros de aquário</li>
-            <li style="font-weight: bold;">Garrafas</li>
-            <li>Copos e pratos</li>
-            <li>Embalagens</li>
+            <a href="#"><li>Vidros de aquário</li></a>
+            <a href="#"><li style="font-weight: bold;">Garrafas</li></a>
+            <a href="#"><li>Copos e pratos</li></a>
+            <a href="#"><li>Embalagens</li></a>
+
+            <div class="container">
+        <h2>Preço Max</h2>
+        <div id="preco">R$ 100,00</div>
+        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
+    </div>
+
+    <script>
+        const precoDisplay = document.getElementById("preco");
+        const precoSlider = document.getElementById("precoSlider");
+
+        precoSlider.addEventListener("input", function() {
+            let valor = precoSlider.value;
+            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
+        });
+    </script>
+
+            
 
     </aside>
 
@@ -130,6 +148,8 @@
 
         <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
     </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

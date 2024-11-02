@@ -112,12 +112,28 @@
     <aside>
         <h2>Alumínios</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li>Latas de Bebidas</li>
-            <li style="font-weight: bold;">Embalagens de alimentos</li>
-            <li>Componentes de Eletroeletrônicos</li>
-            <li>Perfis de Alumínios</li>
-            <li>Resíduos de Processamento</li>
-            <li>Latões e Barris</li>
+            <a href="#"><li>Latas de Bebidas</li></a>
+            <a href="#"><li style="font-weight: bold;">Embalagens de alimentos</li></a>
+            <a href="#"><li>Componentes de Eletroeletrônicos</li></a>
+            <a href="#"><li>Perfis de Alumínios</li></a>
+            <a href="#"><li>Resíduos de Processamento</li></a>
+            <a href="#"><li>Latões e Barris</li></a>
+
+            <div class="container">
+        <h2>Preço Max</h2>
+        <div id="preco">R$ 100,00</div>
+        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
+    </div>
+
+    <script>
+        const precoDisplay = document.getElementById("preco");
+        const precoSlider = document.getElementById("precoSlider");
+
+        precoSlider.addEventListener("input", function() {
+            let valor = precoSlider.value;
+            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
+        });
+    </script>
     </aside>
 
     <div class="produto">

@@ -112,12 +112,28 @@
     <aside>
         <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <li style="font-weight: bold;">Papelão Ondulado</li>
-            <li>Papelão Liso</li>
-            <li>Caixas de Embalagem</li>
-            <li>Papelão de Cores</li>
-            <li>Papelão de Produtos Eletrônico</li>
-            <li>Papelão de Serviço Alimentar</li>
+            <a href="#"><li style="font-weight: bold;">Papelão Ondulado</li></a>
+            <a href="#"><li>Papelão Liso</li></a>
+            <a href="#"><li>Caixas de Embalagem</li></a>
+            <a href="#"><li>Papelão de Cores</li></a>
+            <a href="#"><li>Papelão de Produtos Eletrônico</li></a>
+            <a href="#"><li>Papelão de Serviço Alimentar</li></a>
+
+            <div class="container">
+        <h2>Preço Max</h2>
+        <div id="preco">R$ 100,00</div>
+        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
+    </div>
+
+    <script>
+        const precoDisplay = document.getElementById("preco");
+        const precoSlider = document.getElementById("precoSlider");
+
+        precoSlider.addEventListener("input", function() {
+            let valor = precoSlider.value;
+            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
+        });
+    </script>
     </aside>
 
     <div class="produto">

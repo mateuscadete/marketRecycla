@@ -117,6 +117,22 @@
             <a href="#"><li>Metal Preto</li></a>
             <a href="#"><li>Liga de Metais</li></a>
             <a href="#"><li>Eletrônicos</li></a>
+
+            <div class="container">
+        <h2>Preço Max</h2>
+        <div id="preco">R$ 100,00</div>
+        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
+    </div>
+
+    <script>
+        const precoDisplay = document.getElementById("preco");
+        const precoSlider = document.getElementById("precoSlider");
+
+        precoSlider.addEventListener("input", function() {
+            let valor = precoSlider.value;
+            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
+        });
+    </script>
     </aside>
 
     <div class="produto">
