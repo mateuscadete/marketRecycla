@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
+
+body {
+    background-color: #FFF4ED;
+    /* Cor de fundo */
+
+}
+
+.container-fluid {
+    padding: 0;
+    /* Remove padding do container */
+    margin-bottom: 40px;
+}
+
+.d-flex {
+    height: 400px;
+    /* Altura fixa para a seção de imagens */
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+    /* Faz as divs de imagem ocuparem espaço igual */
+    overflow: hidden;
+    /* Para ocultar partes da imagem que saem do contêiner */
+}
+
+.img-fluid {
+    width: 100%;
+    /* Ocupa toda a largura do contêiner */
+    height: auto;
+    /* Altura automática para manter proporção */
+    transition: transform 0.3s ease, filter 0.3s;
+    /* Transição suave */
+}
+
+.image-container:hover .img-fluid {
+    transform: scale(1.1);
+    /* Aumenta a imagem ao passar o mouse */
+    filter: brightness(0.5);
+    /* Diminui o brilho ao passar o mouse */
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor escura */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s;
+    /* Transição suave */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Fica visível ao passar o mouse */
+}
+
+.caption {
+    position: absolute;
+    bottom: 50%;
+    /* Ajustado para subir até a metade da imagem */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* Mantém a centralização horizontal */
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.5s, transform 0.5s;
+    /* Transição suave */
+    display: flex;
+}
+
+.image-container:hover .caption {
+    opacity: 1;
+    /* Fica visível ao passar o mouse */
+    transform: translate(-50%, -50%);
+    /* Move a legenda para cima */
+}
+
+.perfil:hover {
+    opacity: 0.75;
+    /* Efeito ao passar o mouse na imagem de perfil */
+}
+
+.imagem {
+    width: 20%;
+    /* Ajusta o tamanho das imagens */
+    transition: filter 0.3s;
+    /* Transição suave para o efeito */
+}
+
+.imagem:hover {
+    filter: brightness(0.5);
+    /* Diminui o brilho para 50% ao passar o mouse */
+}
+
+.image-container {
+    margin: 0;
+    /* Remove a margem entre as imagens */
+}
+
+aside {
+    background-color: #E5D9D9;
+    height: 500px;
+    width: 300px;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    left: 20px;
+    border: 3px;
+    border-radius: 5px;
+    position: absolute;
+
+
+}
+
+h2 {}
+
+
+
+
+
+.produto {
+    background-color: #E5D9D9;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 110%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+    box-shadow: 15px 15px 30px #a2b18b,
+        -15px -15px 30px #ffffff;
+}
+
+.garrafa {
+    position: relative;
+    padding-left: 90px;
+    padding-top: 10px;
+    border: 3px;
+    border-radius: 5px;
+}
+
+.descrição {
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.preço {
+    font-size: 15px;
+    font-weight: bold;
+
+    padding-left: 60px;
+}
+
+.comprar {
+    position: static;
+    width: 150px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+
+
+    position: relative;
+
+    left: 120px;
+
+
+}
+
+.endereco {
+    text-align: center;
+}
+
+a {
+    color: green;
+}
+
+.container {
+
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+#preco {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    width: 100%;
+    margin-top: 10px;
+
+}

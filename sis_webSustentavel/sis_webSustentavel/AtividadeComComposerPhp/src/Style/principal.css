@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
+
+
+body {
+    background-color: #FFF4ED;
+    /* Cor de fundo */
+
+}
+
+.container-fluid {
+    padding: 0;
+    /* Remove padding do container */
+}
+
+.d-flex {
+    height: 400px;
+    /* Altura fixa para a seção de imagens */
+}
+
+.image-container {
+    position: relative;
+    flex: 1;
+    /* Faz as divs de imagem ocuparem espaço igual */
+    overflow: hidden;
+    /* Para ocultar partes da imagem que saem do contêiner */
+}
+
+.img-fluid {
+    width: 100%;
+    /* Ocupa toda a largura do contêiner */
+    height: auto;
+    /* Altura automática para manter proporção */
+    transition: transform 0.3s ease, filter 0.3s;
+    /* Transição suave */
+}
+
+.image-container:hover .img-fluid {
+    transform: scale(1.1);
+    /* Aumenta a imagem ao passar o mouse */
+    filter: brightness(0.5);
+    /* Diminui o brilho ao passar o mouse */
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Cor escura */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s;
+    /* Transição suave */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    /* Fica visível ao passar o mouse */
+}
+
+.caption {
+    position: absolute;
+    bottom: 50%;
+    /* Ajustado para subir até a metade da imagem */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* Mantém a centralização horizontal */
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.5s, transform 0.5s;
+    /* Transição suave */
+    display: flex;
+}
+
+.image-container:hover .caption {
+    opacity: 1;
+    /* Fica visível ao passar o mouse */
+    transform: translate(-50%, -50%);
+    /* Move a legenda para cima */
+}
+
+.perfil:hover {
+    opacity: 0.75;
+    /* Efeito ao passar o mouse na imagem de perfil */
+}
+
+.imagem {
+    width: 20%;
+    /* Ajusta o tamanho das imagens */
+    transition: filter 0.3s;
+    /* Transição suave para o efeito */
+}
+
+.imagem:hover {
+    filter: brightness(0.5);
+    /* Diminui o brilho para 50% ao passar o mouse */
+}
+
+.image-container {
+    margin: 0;
+    /* Remove a margem entre as imagens */
+}
