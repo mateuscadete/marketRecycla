@@ -1,17 +1,15 @@
-
-
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <link rel="icon" href="imagens/MR.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Style/principal.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <link rel="stylesheet" href="Style/carrinho.css"> <!-- Link para seu CSS -->
+    <title>Meu Carrinho</title>
+  
 </head>
-
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
@@ -62,61 +60,38 @@
             </a>
         </div>
     </nav>
-    <main>
-        <div class="container-fluid">
-            <div class="d-flex no-gutters">
 
 
-                <div class="image-container">
-                    <a href="./Produtos/plastico.php">
-                        <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
-                        <div class="overlay"></div>
-                        <div class="caption">Plástico</div>
-                </div>
-                </a>
-
-
-                <div class="image-container">
-                    <a href="./Produtos/vidro.php">
-                        <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
-                        <div class="overlay"></div>
-                        <div class="caption">Vidro</div>
-                </div>
-                </a>
-
-
-                <div class="image-container">
-                    <a href="./Produtos/aluminio.php">
-                        <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
-                        <div class="overlay"></div>
-                        <div class="caption">Metal</div>
-                </div>
-                </a>
-
-
-                <div class="image-container">
-                    <a href="./Produtos/papel.php">
-                        <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
-                        <div class="overlay"></div>
-                        <div class="caption">Papel</div>
-                </div>
-                </a>
-
-
-                <div class="image-container">
-                    <a href="./Produtos/eletronicos.php">
-                        <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
-                        <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
-                </div>
-                </a>
-
-            </div>
+  <div class="cart-container">
+    <div class="header">Meu Carrinho 🛒</div>
+    
+    <div class="cart-item">
+      <div class="item-image">
+        <img src="https://img.icons8.com/ios-filled/50/000000/trash.png" alt="Lixeira">
+      </div>
+      <div class="item-details">
+        <p class="item-name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
+        <p class="item-price" id="item-price">R$ 270,00</p>
+        <div class="quantity-container">
+          <div class="quantity-buttons">
+            <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+            <span class="quantity-indicator" id="quantity">1</span>
+            <button class="quantity-button" onclick="increaseQuantity()">+</button>
+          </div>
+          <div class="quantidade">
+            <div class="quantity-fill" id="quantity-fill" style="width: 20%;"></div>
+          </div>
+          <button class="buy-button">Comprar</button>
         </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        <p class="location-info">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+  </div>
 
+  <script href="Javascript/carrinho.js">
+    
+  </script>
+</body>
 </html>
