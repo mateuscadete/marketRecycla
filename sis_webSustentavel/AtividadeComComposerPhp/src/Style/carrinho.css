@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f0ed;
+  background-color: #fff4ed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,9 @@ body {
 }
 
 .cart-container {
-  width: 400px;
+  width: 800px;
+  height: 600px;
+  margin-top: 100px;
   background-color: #e5d5d1;
   border-radius: 10px;
   padding: 20px;
@@ -36,6 +38,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
+  
 }
 
 .item-image img {
@@ -48,12 +51,16 @@ body {
 }
 
 .item-name {
+  text-align:center;
   font-size: 1em;
   font-weight: bold;
   margin: 0;
 }
 
 .item-price {
+  text-align: right;
+
+  padding-right: 140px;
   color: green;
   font-size: 1.1em;
   font-weight: bold;
@@ -64,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  padding-left: 140px;
 }
 
 .quantity-indicator {
@@ -73,18 +81,20 @@ body {
 }
 
 .quantity-bar {
-  width: 100px;
+  width: 210px;
   height: 5px;
   background-color: #f0a1a1;
   border-radius: 5px;
   position: relative;
   margin-right: 5px;
+  
 }
 
 .quantity-fill {
   height: 100%;
   background-color: red;
   border-radius: 5px;
+  
 }
 
 .quantity-buttons {
@@ -107,17 +117,19 @@ body {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 3px 25px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9em;
   margin-left: 10px;
+  left:50px;
 }
 
 .location-info {
   font-size: 0.8em;
   color: #555;
   margin-top: 5px;
+  padding-left: 140px;
 }
 
 .divider {

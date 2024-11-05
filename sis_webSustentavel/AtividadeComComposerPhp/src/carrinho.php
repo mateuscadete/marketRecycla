@@ -61,14 +61,14 @@
                 </div>
             </a>
         </div>
-    </nav>
+</nav>
 
   <div class="cart-container">
     <div class="header">Meu Carrinho 🛒</div>
     
     <div class="cart-item">
       <div class="item-image">
-        <img src="https://img.icons8.com/ios-filled/50/000000/trash.png" alt="Lixeira">
+        <img src="imagens/lixeirametal.jpg" alt="Lixeira">
       </div>
       <div class="item-details">
         <p class="item-name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
