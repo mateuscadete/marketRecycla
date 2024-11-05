@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-    <link rel="icon" href="imagens/MR.ico" type="image/icon">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Style/carrinho.css">
+  <link rel="icon" href="imagens/MR.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Style/carrinho.css"> <!-- Link para seu CSS -->
-    <title>Meu Carrinho</title>
-  
+  <title>Meu Carrinho</title>
+  <style>
+    
+  </style>
 </head>
 <body>
 
@@ -61,7 +63,6 @@
         </div>
     </nav>
 
-
   <div class="cart-container">
     <div class="header">Meu Carrinho 🛒</div>
     
@@ -78,7 +79,7 @@
             <span class="quantity-indicator" id="quantity">1</span>
             <button class="quantity-button" onclick="increaseQuantity()">+</button>
           </div>
-          <div class="quantidade">
+          <div class="quantity-bar">
             <div class="quantity-fill" id="quantity-fill" style="width: 20%;"></div>
           </div>
           <button class="buy-button">Comprar</button>
@@ -90,7 +91,7 @@
     <div class="divider"></div>
   </div>
 
-  <script href="Javascript/carrinho.js">
+  <script src="JavaScript/carrinho.js">
     
   </script>
 </body>
