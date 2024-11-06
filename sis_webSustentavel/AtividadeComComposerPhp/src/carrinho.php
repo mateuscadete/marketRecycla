@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
-            <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
+            <img src="imagens/MarketRecycla.png" alt="menu" class="img-fluid">
         </button>
         <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -47,7 +47,7 @@
                 
                     <button type="button" class="btn btn-link text-light">
 
-                        <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
+                        <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
                     </button>
 </a>
 
@@ -56,7 +56,7 @@
             <a href="cadastro.php">
                 <div class="perfil">
                     <button type="button" class="btn btn-link text-light ml-3">
-                        <img src="imagens/Generic avatar.png" alt="Perfil" class="img-fluid">
+                        <img src="imagens/Generic avatar.png" alt="Perfil" class="ft-pefil">
                     </button>
                 </div>
             </a>
