@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/MR.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Style/sobre.css"> <!-- Link para seu CSS -->
     <title>Sobre - MarketRecycla</title>
@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
-            <img src="imagens/menu.png" alt="menu" class="img-fluid">
+            <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
         </button>
         <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -39,11 +39,15 @@
             <a href="produto.php">    
             <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
             </a>
+
+            <a href="carrinho.php">
+
                 
                     <button type="button" class="btn btn-link text-light">
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
                     </button>
+   </a>
 
             </div>
 
@@ -55,7 +59,7 @@
                 </div>
             </a>
         </div>
-    </nav>
+</nav>
     <main>
         <div class="container-fluid">
             <div class="d-flex no-gutters">

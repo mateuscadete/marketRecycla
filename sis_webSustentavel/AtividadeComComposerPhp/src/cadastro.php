@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style/cadastro.css">
-    <!-- Adicionando o Bootstrap -->
+    <link rel="icon" href="imagens/MR.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
-            <img src="imagens/menu.png" alt="menu" class="img-fluid">
+            <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
         </button>
         <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -61,11 +61,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="produto.php">    
             <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
             </a>
+
+            <a href="carrinho.php">
+
                 
                     <button type="button" class="btn btn-link text-light">
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
                     </button>
+   </a>
 
             </div>
 
@@ -77,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </a>
         </div>
-    </nav>
+</nav>
 
     <!-- Formulário de Cadastro -->
     <div class="login-container" style="margin-top: 80px;"> <!-- Ajustando a margem superior para dar espaço ao nav -->

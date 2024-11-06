@@ -49,7 +49,7 @@
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
                     </button>
-</a>
+   </a>
 
             </div>
 
@@ -61,7 +61,7 @@
                 </div>
             </a>
         </div>
-    </nav>
+</nav>
     <main>
         <div class="container-fluid">
             <div class="d-flex no-gutters">

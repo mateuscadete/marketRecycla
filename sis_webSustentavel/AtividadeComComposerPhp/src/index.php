@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style/index.css">
+    <link rel="icon" href="imagens/MR.ico" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Login</title>
     
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
-            <img src="imagens/menu.png" alt="menu" class="img-fluid">
+            <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
         </button>
         <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -57,11 +58,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="produto.php">    
             <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
             </a>
+
+            <a href="carrinho.php">
+
                 
                     <button type="button" class="btn btn-link text-light">
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
                     </button>
+   </a>
 
             </div>
 
@@ -73,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </a>
         </div>
-    </nav>
+</nav>
 
     
        <div class="login">
@@ -83,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <input type="text" name="nome" placeholder="Insira seu nome" required>
         
-<br><br>
+   <br><br>
         
         <input type="password" name="senha" placeholder="Insira sua senha" required>
 
