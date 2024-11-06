@@ -135,9 +135,12 @@ h2 {}
     left: 60%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    box-shadow: 15px 15px 30px #a2b18b,
-        -15px -15px 30px #ffffff;
+.produto:hover{
+   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra no hover */
 }
 
 .garrafa {

@@ -129,6 +129,12 @@ aside {
     left: 60%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover{
+   
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra no hover */
 }
 
 .garrafa {
