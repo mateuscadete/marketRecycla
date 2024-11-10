@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Style/carrinho.css">
-  <link rel="icon" href="imagens/MR.ico" type="image/icon">
+  <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Meu Carrinho</title>
   <style>

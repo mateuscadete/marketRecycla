@@ -6,6 +6,12 @@ body {
     /* Cor de fundo */
 }
 
+.logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+}
+
 
 
 .somos {

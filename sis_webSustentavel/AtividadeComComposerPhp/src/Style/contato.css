@@ -11,6 +11,12 @@ body {
     background-size: cover;
 }
 
+.img-fluid {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+}
+
 .contato {
 
     margin-top: 110px;

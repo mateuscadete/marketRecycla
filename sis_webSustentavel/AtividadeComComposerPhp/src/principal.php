@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="imagens/MR.ico" type="image/icon">
+    <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="Style/principal.css"> <!-- Link para seu CSS -->
     <title>MarketRecycla</title>
@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
-            <img src="imagens/MarketRecycla1.png" alt="menu" class="img-fluid">
+            <img src="imagens/MarketRecycla.png" alt="menu" class="logo">
         </button>
         <a class="navbar-brand" href="principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -47,7 +47,7 @@
                 
                     <button type="button" class="btn btn-link text-light">
 
-                        <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="img-fluid">
+                        <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
                     </button>
    </a>
 
@@ -56,7 +56,7 @@
             <a href="cadastro.php">
                 <div class="perfil">
                     <button type="button" class="btn btn-link text-light ml-3">
-                        <img src="imagens/Generic avatar.png" alt="Perfil" class="img-fluid">
+                        <img src="imagens/Generic avatar.png" alt="Perfil" class="ft-perfil">
                     </button>
                 </div>
             </a>
