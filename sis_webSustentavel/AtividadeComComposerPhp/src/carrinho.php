@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <script async src="JavaScript/carrinho.js"></script>
   <link rel="stylesheet" href="Style/carrinho.css">
   <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -70,28 +71,33 @@
       <div class="item-image">
         <img src="imagens/lixeirametal.jpg" alt="Lixeira">
       </div>
-      <div class="item-details">
-        <p class="item-name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
-        <p class="item-price" id="item-price">R$ 270,00</p>
-        <div class="quantity-container">
-          <div class="quantity-buttons">
-            <button class="quantity-button" onclick="decreaseQuantity()">-</button>
-            <span class="quantity-indicator" id="quantity">1</span>
-            <button class="quantity-button" onclick="increaseQuantity()">+</button>
+      <div class="detalhes">
+        <p class="name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
+        <p class="preco" id="preco">R$ 270,00</p>
+        
+        <div class="container">
+          <div class="botões">
+            <button class="maismenos" onclick="decreaseQuantity()">-</button>
+            <span class="indicador" id="quantidade">1</span>
+            <button class="maismenos" onclick="increaseQuantity()">+</button>
           </div>
+
           <div class="quantity-bar">
-            <div class="quantity-fill" id="quantity-fill" style="width: 20%;"></div>
+            <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
           </div>
-          <button class="buy-button">Comprar</button>
+          
+          <button class="comprar">Comprar</button>
+          
+          <button class="remover">Remover</button>
         </div>
-        <p class="location-info">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
+        <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
     </div>
     
     <div class="divider"></div>
   </div>
 
-  <script src="JavaScript/carrinho.js">
+  
     
   </script>
 </body>
