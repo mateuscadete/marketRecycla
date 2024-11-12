@@ -27,12 +27,22 @@ function decreaseQuantity() {
   }
 }
 
-updatePreco(); // Inicializa o preço ao carregar a página
-
-const remover = document.getElementsByClassName("remover")
-for (var i = 0; i < remover.length; i++) {
-  remover[i].addEventListener("clck", function (event) {
-    event.target.parentElement.parentElement.parentElement.parentElement.remove()
+const remove = document.getElementsByClassName("remover")
+for (var i = 0; i < remove.length; i++) {
+  remove[i].addEventListener("click", function (event) {
+    event.target.parentElement.parentElement.parentElement.remove()
   })
 }
+
+
+const somaTotal = document.getElementsByClassName("preco")
+for (var i = 0; i < somaTotal.length; i++) {
+
+
+  somaTotal == preco + preco
+}
+
+
+updatePreco(); // Inicializa o preço ao carregar a página
+
 

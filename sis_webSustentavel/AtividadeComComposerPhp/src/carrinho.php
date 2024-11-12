@@ -86,9 +86,9 @@
             <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
           </div>
           
-          <button class="comprar">Comprar</button>
+          <button type="button" class="comprar">Comprar</button>
           
-          <button class="remover">Remover</button>
+          <button type="button" onclick="remove()" class="remover">Remover</button>
         </div>
         <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
@@ -99,6 +99,6 @@
 
   
     
-  </script>
+  
 </body>
 </html>
