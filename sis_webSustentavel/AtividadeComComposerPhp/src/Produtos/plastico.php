@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
         </button>
-        <a class="navbar-brand" href="principal.php">MarketRecycla</a>
+        <a class="navbar-brand" href="../principal.php">MarketRecycla</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,10 +23,10 @@
             <ul class="navbar-nav mr-auto">
                
                 <li class="nav-item">
-                    <a class="nav-link" href="sobre.php">Sobre</a>
+                    <a class="nav-link" href="../sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.php">Contato</a>
+                    <a class="nav-link" href="../contato.php">Contato</a>
                 </li>
             </ul>
 
@@ -36,7 +36,7 @@
             </form>
 
             <div class="btn-group mx-3" role="group" aria-label="Basic example">
-            <a href="produto.php">    
+            <a href="../produto.php">    
             <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
             </a>
 
@@ -148,6 +148,7 @@
         <p class="preço">R$ 16, <sub>99</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
+        <p><img src="../imagens/carrinhoverde.png"></p>
 
         <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
     </div>
