@@ -6,5 +6,7 @@
             "App\\": "src/"
         }
     },
-    "require": {}
+    "require": {
+        "stripe/stripe-php": "^16.2"
+    }
 }

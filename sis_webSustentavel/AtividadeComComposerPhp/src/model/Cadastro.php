@@ -33,7 +33,7 @@ class Cadastro {
             $stmt->execute();
 
 
-            header("Location:principal.html");
+            header("Location:principal.php");
             exit;
         } catch (PDOException $e) {
             return 'Erro ao cadastrar usuário: ' . $e->getMessage();

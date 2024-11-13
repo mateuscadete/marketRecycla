@@ -30,7 +30,7 @@ class Produto {
             $stmt->execute();
 
 
-            header("Location:principal.html");
+            header("Location:principal.php");
             exit;
         } catch (PDOException $e) {
             return 'Erro ao cadastrar Produto: ' . $e->getMessage();
