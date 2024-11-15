@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Style/index.css">
     <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
+    <link rel="manifest" href="pwa/manifest.json">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Login</title>
     
