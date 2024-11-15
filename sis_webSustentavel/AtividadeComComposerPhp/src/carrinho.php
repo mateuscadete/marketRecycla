@@ -1,3 +1,14 @@
+<?php
+session_start();
+require 'model/Api.php';
+require 'model/produto.php';
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
