@@ -111,7 +111,18 @@ body {
   align-items: center;
 }
 
-.maismenos {
+.mais {
+  background-color: #ddd;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+.menos {
   background-color: #ddd;
   border: none;
   padding: 3px 8px;
@@ -159,4 +170,11 @@ body {
 .divider {
   border-top: 1px solid #ccc;
   margin-top: 15px;
+
+
+}
+
+.total{
+  text-align: right;
+  font-weight: bold;
 }

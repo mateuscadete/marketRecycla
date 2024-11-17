@@ -1,48 +1,42 @@
-const precoItem = 270.00; // Preço fixo por item
-let quantidade = 1;
+document.addEventListener("DOMContentLoaded", () => {
+  updateTotal();
 
-function updatePreco() {
-  const totalPreco = precoItem * quantidade;
-  document.getElementById('preco').textContent = `R$ ${totalPreco.toFixed(2).replace('.', ',')}`;
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const menosBt = item.querySelector(".menos");
+    const maisBt = item.querySelector(".mais");
+    const removerBt = item.querySelector(".remover");
+    const quantidade = item.querySelector(".quantidade");
+    const precoProduto = item.querySelector(".preco").dataset.price;
+
+    menosBt.addEventListener("click", () => {
+      let count = parseInt(quantidade.textContent);
+      if (count > 1) {
+        count--;
+        quantidade.textContent = count;
+        updateTotal();
+      }
+    });
+
+    maisBt.addEventListener("click", () => {
+      let count = parseInt(quantidade.textContent);
+      count++;
+      quantidade.textContent = count;
+      updateTotal();
+    });
+
+    removerBt.addEventListener("click", () => {
+      item.remove();
+      updateTotal();
+    });
+  });
+});
+
+function updateTotal() {
+  let total = 0;
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const count = parseInt(item.querySelector(".quantidade").textContent);
+    const price = parseFloat(item.querySelector(".preco").dataset.price);
+    total += count * price;
+  });
+  document.getElementById("valorTotal").textContent = total.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
-
-function updateQuantityFill() {
-  const fillPercentage = Math.min(100, (quantidade / 50) * 100); // Limita o preenchimento até 100%
-  document.getElementById('quantity-fill').style.width = `${fillPercentage}%`;
-}
-
-function increaseQuantity() {
-  quantidade++;
-  document.getElementById('quantidade').textContent = quantidade;
-  updatePreco();
-  updateQuantityFill();
-}
-
-function decreaseQuantity() {
-  if (quantidade > 1) {
-    quantidade--;
-    document.getElementById('quantidade').textContent = quantidade;
-    updatePreco();
-    updateQuantityFill();
-  }
-}
-
-const remove = document.getElementsByClassName("remover")
-for (var i = 0; i < remove.length; i++) {
-  remove[i].addEventListener("click", function (event) {
-    event.target.parentElement.parentElement.parentElement.remove()
-  })
-}
-
-
-const somaTotal = document.getElementsByClassName("preco")
-for (var i = 0; i < somaTotal.length; i++) {
-
-
-  somaTotal == preco + preco
-}
-
-
-updatePreco(); // Inicializa o preço ao carregar a página
-
-
