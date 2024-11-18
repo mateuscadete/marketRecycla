@@ -86,7 +86,7 @@ require 'model/produto.php';
       </div>
       <div class="detalhes">
         <p class="name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
-        <p class="price">R$ <span class="preco" data-price="270">270,00</span></p>
+        <p class="price"> <span class="preco" data-price="270">R$ 270,00</span></p>
 
         <div class="container">
           <div class="botões">
@@ -99,7 +99,7 @@ require 'model/produto.php';
             <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
           </div>
 
-          <button type="button" class="comprar">Comprar</button>
+         
 
           <button type="button" class="remover">Remover</button>
         </div>
@@ -114,7 +114,7 @@ require 'model/produto.php';
       </div>
       <div class="detalhes">
         <p class="name">Garrafa Pet 2,5L</p>
-        <p class="price">R$ <span class="preco" data-price="16">16,00</span></p>
+        <p class="price"><span class="preco" data-price="16">R$ 16,00</span></p>
 
         <div class="container">
           <div class="botões">
@@ -127,16 +127,20 @@ require 'model/produto.php';
             <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
           </div>
 
-          <button type="button" class="comprar">Comprar</button>
+          
 
           <button type="button" class="remover">Remover</button>
         </div>
         <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
     </div>
-
+    <div class="divider"></div>
     <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
+  
+    <button type="button" class="comprar">Finalizar Compra</button>
   </div>
+
+  
 
 
 

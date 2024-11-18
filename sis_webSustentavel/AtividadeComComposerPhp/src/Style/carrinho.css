@@ -67,8 +67,7 @@ body {
 
 .preco {
   text-align: right;
-
-  padding-right: 150px;
+  padding-left: 20px;
   color: green;
   font-size: 1.1em;
   font-weight: bold;
@@ -134,15 +133,20 @@ body {
 }
 
 .comprar {
+  position: relative;
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 3px 25px;
+  padding: 10px 50px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9em;
-  margin-left: 30px;
+  margin-left: 270px;
   left: 50px;
+}
+
+.comprar:hover {
+  background-color: lightgreen;
 }
 
 .remover {
@@ -174,7 +178,7 @@ body {
 
 }
 
-.total{
+.total {
   text-align: right;
   font-weight: bold;
 }

@@ -40,12 +40,17 @@ h1 {
     padding-bottom: 20px;
 }
 
+#nomeid,
+#emailid {
+    padding-left: 20px;
+}
+
 input,
 textarea {
     width: 200px;
     padding: 10px;
     color: green;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid;
@@ -66,10 +71,7 @@ textarea:focus {
     background-color: green;
     height: 40px;
     width: 100px;
-
     border-radius: 5px;
-
-
     color: rgb(255, 255, 255);
 }
 
@@ -93,4 +95,13 @@ form label {
 
 label {
     color: white;
+    margin-right: 28px;
+}
+
+#fone {
+    margin-right: 8px;
+}
+
+#nome {
+    margin-right: 25px;
 }

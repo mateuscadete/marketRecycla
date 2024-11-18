@@ -67,14 +67,17 @@
 
         <h1>Entre em contato</h1>
 
+        <label for="nome" id="nome">Nome</label>
         <input type="text" id="nomeid" placeholder="Insira o seu nome" required="required" name="nome" />
-        <label for="nome">Nome</label>
+        
         <br><br>
+        <label for="fone" id="fone">Telefone</label>
         <input type="tel" id="foneid" placeholder="Insira seu numero" name="fone" />
-        <label for="fone">Telefone</label>
+        
         <br><br>
-        <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
         <label for="email">Email</label>
+        <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
+        
         <br><br>
         <textarea placeholder="Deixe sua mensagem"></textarea>
 <br><br>
