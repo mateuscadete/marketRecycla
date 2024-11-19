@@ -88,6 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST" action="">
             <input type="text" name="nome" placeholder="Insira o nome do Produto" required>
             <input type="text" name="qtd" placeholder="Insira a quantidade do produto" required>
+            <input type="text" name="preco" placeholder="Insira o preço do produto" required>
             <input type="text" name="descricao"  placeholder="Insira sua descrição" required >
             <button type="submit">Cadastrar Produto</button>
         </form>

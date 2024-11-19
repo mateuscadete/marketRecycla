@@ -142,7 +142,20 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/lapidado.jfif">
+        <img class="figura" src="../imagens/lapidado.jfif">
+
+        <p class="descrição">Garrafa de Vidro Lapidado</p>
+
+        <p class="preço">R$ 32,<sub>55</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/vidrometro.jpg">
 
         <p class="descrição">Garrafa de Vidro Lapidado</p>
 

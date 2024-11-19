@@ -132,8 +132,20 @@ aside {
     width: 400px;
     height: 400px;
     position: absolute;
-    top: 130%;
-    left: 60%;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto2 {
+    background-color: #E5D9D9;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 90%;
+    left: 40%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -145,7 +157,7 @@ aside {
     /* Sombra no hover */
 }
 
-.garrafa {
+.figura {
     position: relative;
     padding-left: 90px;
     padding-top: 10px;

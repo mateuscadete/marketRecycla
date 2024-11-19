@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
                     </button>
-</a>
+            </a>
 
             </div>
 

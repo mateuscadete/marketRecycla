@@ -140,7 +140,20 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/lixeirametal.jpg">
+        <img class="figura" src="../imagens/lixeirametal.jpg">
+
+        <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
+
+        <p class="preço">R$ 270,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/mesa.jpg">
 
         <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 

@@ -133,8 +133,9 @@ require 'model/produto.php';
         </div>
         <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
+      <div class="divider"></div>
     </div>
-    <div class="divider"></div>
+    
     <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
   
     <button type="button" class="comprar">Finalizar Compra</button>

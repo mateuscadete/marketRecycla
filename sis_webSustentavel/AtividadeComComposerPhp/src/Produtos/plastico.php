@@ -141,7 +141,7 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/garrafapet.jfif">
+        <img class="figura" src="../imagens/garrafapet.jfif">
 
         <p class="descrição">Garrafa PET 1,5L</p>
 
@@ -152,6 +152,20 @@
 
         <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
     </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/potepet.webp">
+
+        <p class="descrição">Garrafa PET 1,5L</p>
+
+        <p class="preço">R$ 16, <sub>99</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+    </div>
+
 
     <footer></footer>
 
