@@ -148,7 +148,7 @@
         <p class="preço">R$ 16, <sub>99</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
-        <p><img src="../imagens/carrinhoverde.png"></p>
+        
 
         <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
     </div>

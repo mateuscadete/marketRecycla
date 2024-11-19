@@ -149,7 +149,7 @@
         <p class="preço">R$ 32,<sub>55</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
-        <p><img src="../imagens/carrinhoverde.png"></p>
+        
 
         <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
     </div>

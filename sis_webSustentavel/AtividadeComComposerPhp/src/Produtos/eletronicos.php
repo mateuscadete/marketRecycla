@@ -147,7 +147,7 @@
         <p class="preço">R$ 270,<sub>00</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
-        <p><img src="../imagens/carrinhoverde.png"></p>
+        
 
         <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
     </div>
