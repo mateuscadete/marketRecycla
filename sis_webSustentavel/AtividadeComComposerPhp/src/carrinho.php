@@ -1,10 +1,56 @@
 <?php
-session_start();
-require 'model/Api.php';
-require 'model/produto.php';
+session_start(); // Inicia a sessão para o carrinho (sim, mais um motivo para não fechar o navegador!)
+
+use MeuProjeto\controllers\ProdutoController;
 
 
 
+// Inicializa o carrinho se não existir
+if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = []; // A vida começa com um carrinho vazio...
+}
+
+// Verifica se há um produto para adicionar
+if (isset($_GET['add'])) {
+    $idProduto = (int)$_GET['add'];
+
+    // Apenas IDs válidos (> 0) podem ser adicionados
+    if ($idProduto > 0) {
+        if (isset($_SESSION['carrinho'][$idProduto])) {
+            $_SESSION['carrinho'][$idProduto]++;
+        } else {
+            $_SESSION['carrinho'][$idProduto] = 5; // Primeira vez adicionando este produto? Bem-vindo ao carrinho!
+        }
+    } else {
+        // Alguém tentou adicionar algo suspeito? Não, obrigado!
+        echo "ID inválido, você não vai hackear o carrinho hoje!";
+    }
+
+    header('Location: carrinho.php'); // Porque ninguém gosta de recarregar a página manualmente!
+    exit;
+}
+
+// Verifica se há um produto para remover
+if (isset($_GET['remove'])) {
+    $idProduto = (int)$_GET['remove'];
+
+    if ($idProduto > 0 && isset($_SESSION['carrinho'][$idProduto])) {
+        $_SESSION['carrinho'][$idProduto]--; // Menos um no carrinho... adeus, produto!
+        if ($_SESSION['carrinho'][$idProduto] <= 0) {
+            unset($_SESSION['carrinho'][$idProduto]); // Bye-bye, item zerado!
+        }
+    }
+
+    header('Location: carrinho.php'); // Porque, sério, redirecionar é mais fácil!
+    exit;
+}
+
+// Remove IDs inválidos do carrinho automaticamente
+foreach ($_SESSION['carrinho'] as $idProduto => $quantidade) {
+    if ($idProduto <= 0) {
+        unset($_SESSION['carrinho'][$idProduto]); // Este não deveria estar aqui... removido!
+    }
+}
 ?>
 
 
@@ -133,9 +179,8 @@ require 'model/produto.php';
         </div>
         <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
-      <div class="divider"></div>
     </div>
-    
+    <div class="divider"></div>
     <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
   
     <button type="button" class="comprar">Finalizar Compra</button>

@@ -50,7 +50,7 @@ class Login {
                     exit();
                 }
             } else {
-                echo "<h3 style='color: red; font-size: 20px; left:60%; top:130%'>Usuário ou senha incorretos</h3>";
+                echo "<h3 style='color: red; font-size: 20px;'>Usuário ou senha incorretos</h3>";
             }
         }
     }

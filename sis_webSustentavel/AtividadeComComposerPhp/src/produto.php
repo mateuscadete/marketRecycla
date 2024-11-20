@@ -7,11 +7,12 @@ $mensagem = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
-    $qtd = $_POST['qtd'] ?? '';
+    $qtde = $_POST['qtde'] ?? '';
     $descricao= $_POST['descricao'] ?? '';
+    $preco= $POST['preco'] ?? '';
 
    
-    $user = new Produto($nome, $qtd, $descricao);
+    $user = new Produto($nome, $qtde, $descricao, $preco);
 
   
     $mensagem = $user->cadastrar_produto();
@@ -87,9 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Cadastre o Produto</h2>
         <form method="POST" action="">
             <input type="text" name="nome" placeholder="Insira o nome do Produto" required>
-            <input type="text" name="qtd" placeholder="Insira a quantidade do produto" required>
-            <input type="text" name="preco" placeholder="Insira o preço do produto" required>
+            <input type="number" name="qtd" placeholder="Insira a quantidade do produto" required>
             <input type="text" name="descricao"  placeholder="Insira sua descrição" required >
+            <input type="number" name="preco"  placeholder="Insira seu preço" required >
             <button type="submit">Cadastrar Produto</button>
         </form>
     </div>

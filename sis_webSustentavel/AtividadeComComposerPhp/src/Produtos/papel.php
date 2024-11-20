@@ -141,20 +141,7 @@
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../imagens/papelão.jpg">
-
-        <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
-
-        <p class="preço">R$ 9,<sub>99</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
-        
-        
-        <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
-    </div>
-
-    <div class="produto2">
-        <img class="figura" src="../imagens/jornal.png">
+        <img class="garrafa" src="../imagens/papelão.jpg">
 
         <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
 

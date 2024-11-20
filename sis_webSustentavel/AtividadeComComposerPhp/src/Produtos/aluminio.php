@@ -141,20 +141,7 @@
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../imagens/aluminio.jfif">
-
-        <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
-
-        <p class="preço">R$ 10,<sub>95</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
-        
-
-        <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
-    </div>
-
-    <div class="produto2">
-        <img class="figura" src="../imagens/papelaluminio.jpg">
+        <img class="garrafa" src="../imagens/aluminio.jfif">
 
         <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
 
