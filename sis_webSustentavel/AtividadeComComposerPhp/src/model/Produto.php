@@ -33,7 +33,7 @@ class Produto{
             $stmt->execute();
 
 
-            header("Location:principal.php");
+            header("Location:tela.php");
             exit;
         } catch (PDOException $e) {
             return 'Erro ao cadastrar usuário: ' . $e->getMessage();

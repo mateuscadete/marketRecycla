@@ -1,36 +1,74 @@
 <?php
 namespace App\model;
 
+use App\persistence\ConnectionFactory;
 use PDO;
+use PDOException;
 
 class Carrinho {
     private $pdo;
-    private $produtos = [];
 
-    public function __construct(PDO $pdo) {
-        $this->pdo = $pdo;
-    }
-
-    // Método para adicionar produto ao carrinho a partir do banco de dados
-    public function addProdutoFromDatabase($produtoId, $quantidade) {
-        // Consulta SQL para buscar o produto no banco de dados
-        $stmt = $this->pdo->prepare("SELECT id, nome, descricao, preco FROM produtos WHERE id = :id");
-        $stmt->bindParam(':id', $produtoId, PDO::PARAM_INT);
-        $stmt->execute();
-
-        $produto = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if ($produto) {
-            // Cria uma instância do produto e adiciona ao carrinho
-            $produtoObj = new Produto($produto['id'], $produto['nome'], $produto['descricao'], $quantidade, $produto['preco']);
-            $this->produtos[] = $produtoObj;
-        } else {
-            throw new Exception("Produto não encontrado.");
+    public function __construct() {
+        try {
+            // Configuração para conexão com o banco de dados
+            $this->pdo = new \PDO('mysql:host=localhost;dbname=db_name', 'root', '');
+            $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo 'Connection failed: ' . $e->getMessage();
         }
     }
 
-    // Método para obter todos os produtos do carrinho
-    public function getCarrinho() {
-        return $this->produtos;
+    // Função para adicionar produto ao carrinho
+    public function adicionarProduto($idProduto, $qtde) : void {
+        try {
+            // Verifica se o produto já existe no carrinho
+            $stmt = $this->pdo->prepare("SELECT * FROM produto WHERE idProduto = :idProduto");
+            $stmt->bindParam(':idProduto', $idProduto);
+            $stmt->execute();
+
+            if ($stmt->rowCount() > 0) {
+                // Se o produto já existe no carrinho, atualiza a quantidade
+                $stmt = $this->pdo->prepare("UPDATE produto SET qtde = qtde + :qtde WHERE idProduto = :idProduto");
+                $stmt->bindParam(':qtde', $qtde);
+                $stmt->bindParam('idProduto', $idProduto);
+                $stmt->execute();
+            } else {
+                // Se o produto não existe no carrinho, insere um novo registro
+                $stmt = $this->pdo->prepare("INSERT INTO produto (idProduto, qtde) VALUES (:idProduto, :qtde)");
+                $stmt->bindParam(':idProduto', $idProduto);
+                $stmt->bindParam(':qtde', $qtde);
+                $stmt->execute();
+            }
+
+            // Retorna sucesso
+            echo json_encode(["message" => "Produto adicionado ao carrinho"]);
+        } catch (PDOException $e) {
+            echo json_encode(["error" => "Erro ao adicionar produto ao carrinho: " . $e->getMessage()]);
+        }
+    }
+
+    // Função para remover um produto do carrinho
+    public function removerProduto($idProduto) : void {
+        try {
+            $stmt = $this->pdo->prepare("DELETE FROM produto WHERE idProduto = :idProduto");
+            $stmt->bindParam(':idProduto', $idProduto);
+            $stmt->execute();
+            
+            echo json_encode(["message" => "Produto removido do carrinho"]);
+        } catch (PDOException $e) {
+            echo json_encode(["error" => "Erro ao remover produto do carrinho: " . $e->getMessage()]);
+        }
+    }
+
+    // Função para listar os produtos no carrinho
+    public function listarCarrinho() {
+        try {
+            $stmt = $this->pdo->query("SELECT p.nome, p.preco, c.quantidade 
+                                       FROM produto c 
+                                       JOIN produto p ON c.idProduto = p.id");
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            return json_encode(["error" => "Erro ao listar produtos no carrinho: " . $e->getMessage()]);
+        }
     }
 }

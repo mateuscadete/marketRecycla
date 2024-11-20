@@ -1,3 +1,36 @@
+
+<?php
+require_once '../../vendor/autoload.php';
+
+use App\model\Api;
+
+// Inicializa a mensagem de retorno
+$mensagem = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recebe os dados enviados via POST
+    $nome = $_POST['nome'] ?? '';
+    $qtde = $_POST['qtde'] ?? '';
+    $descricao = $_POST['descricao'] ?? '';
+    $preco = $_POST['preco'] ?? '';
+
+    // Validação básica dos campos
+    if (empty($nome) || empty($qtde) || empty($descricao) || empty($preco)) {
+        $mensagem = 'Todos os campos devem ser preenchidos.';
+    } else {
+        try {
+            // Criação do objeto Produto (ajuste conforme sua classe)
+            $produto = new Produto($nome, $qtde, $descricao, $preco);
+
+            // Cadastra o produto no carrinho chamando o método da API
+            $mensagem = $produto->adicionarAoCarrinho(); // Substitua pelo método correto na classe Produto
+        } catch (Exception $e) {
+            $mensagem = 'Erro ao adicionar o produto ao carrinho: ' . $e->getMessage();
+        }
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
