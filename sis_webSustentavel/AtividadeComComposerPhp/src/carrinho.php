@@ -87,6 +87,7 @@ $produtos = $carrinho->listarCarrinho();
     <div class="header">Meu Carrinho 🛒</div>
 
     <div class="cart-item">
+      
       <div class="item-image">
         <img src="imagens/lixeirametal.jpg" alt="Lixeira">
       </div>
