@@ -1,18 +1,23 @@
 <?php
 require_once '../vendor/autoload.php';
-use App\model\Carrinho;
 
-// Cria instância da classe Carrinho
-$carrinho = new Carrinho();
+use App\model\Produto;
 
-// Adicionar um produto ao carrinho (exemplo com ID 1 e quantidade 2)
-$carrinho->adicionarProduto(1, 2);
+$mensagem = '';  // Variável para armazenar a mensagem de sucesso ou erro
 
-// Remover um produto do carrinho (exemplo com ID 1)
-$carrinho->removerProduto(1);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Pega o ID do produto informado pelo usuário
+    $idProduto = $_POST['idProduto'] ?? '';
 
-// Listar todos os produtos no carrinho
-$produtos = $carrinho->listarCarrinho();
+    // Verifica se o ID foi informado
+    if (!empty($idProduto)) {
+        $produto = new Produto('', '', '', '');  // Cria um objeto Produto
+        $mensagem = $produto->deletar_produto($idProduto);  // Tenta deletar o produto
+    } else {
+        $mensagem = "Por favor, informe um ID de produto válido!";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -105,10 +110,18 @@ $produtos = $carrinho->listarCarrinho();
           <div class="quantity-bar">
             <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
           </div>
-
-         
-
-          <button type="button" class="remover">Remover</button>
+          <form method="POST" action="model/Deletar.php">
+    <label for="idProduto">ID do Produto:</label>
+    <input type="text" name="idProduto" id="idProduto" required>
+    <button type="submit">Deletar Produto</button>
+</form>
+        <p>
+        <?php
+        if (isset($mensagem)) {
+            echo $mensagem;
+        }
+        ?>
+    </p>
         </div>
         <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
       </div>
