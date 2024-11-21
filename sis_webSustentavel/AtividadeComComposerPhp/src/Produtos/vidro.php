@@ -11,7 +11,7 @@
 
 
 <body>
-<div class="content"></div>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> 
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
@@ -194,11 +194,7 @@
 
         <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
     </div>
-    </div>
-    
-    <footer class="bg-dark text-light text-center py-3 mt-5">
-        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
-    </footer>
+   
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
