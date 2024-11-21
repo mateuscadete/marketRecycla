@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div class="content"></div>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
@@ -191,11 +191,9 @@
         
 
         <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
+    
     </div>
-    </div>
-    <footer class="bg-dark text-light text-center py-3 mt-5">
-        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
-    </footer>
+    
 
 
 
