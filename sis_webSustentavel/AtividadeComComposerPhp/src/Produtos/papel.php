@@ -116,12 +116,11 @@
     <aside>
         <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li style="font-weight: bold;">Papelão Ondulado</li></a>
-            <a href="#"><li>Papelão Liso</li></a>
+            <a href="#"><li style="font-weight: bold;">Papelão</li></a>
+            <a href="#"><li>Papel Simples</li></a>
             <a href="#"><li>Caixas de Embalagem</li></a>
-            <a href="#"><li>Papelão de Cores</li></a>
             <a href="#"><li>Papelão de Produtos Eletrônico</li></a>
-            <a href="#"><li>Papelão de Serviço Alimentar</li></a>
+            
 
             <div class="container">
         <h2>Preço Max</h2>

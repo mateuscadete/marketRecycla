@@ -117,9 +117,7 @@
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
             <a href="#"><li style="font-weight: bold;">Aço</li></a>
             <a href="#"><li>Cobre</li></a>
-            <a href="#"><li>Lata de Ferro</li></a>
-            <a href="#"><li>Metal Preto</li></a>
-            <a href="#"><li>Liga de Metais</li></a>
+            <a href="#"><li>Dispositivos Menores</li></a>
             <a href="#"><li>Eletrônicos</li></a>
 
             <div class="container">
@@ -140,7 +138,7 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/lixeirametal.jpg">
+        <img class="figura" src="../imagens/lixeirametal.jpg">
 
         <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 
@@ -150,6 +148,19 @@
         
 
         <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/mesa.jpg">
+
+        <p class="descrição">Mesa de Aço </p>
+
+        <p class="preço">R$ 100,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Brás | Hoje 11:10</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

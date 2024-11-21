@@ -141,7 +141,7 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/garrafapet.jfif">
+        <img class="figura" src="../imagens/garrafapet.jfif">
 
         <p class="descrição">Garrafa PET 1,5L</p>
 
@@ -151,6 +151,32 @@
         
 
         <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/potepet.webp">
+
+        <p class="descrição">Pote com tampa</p>
+
+        <p class="preço">R$ 10, <sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Itaquaquecetuba  | 1/11/2024 17:00</p>
+    </div>
+
+    <div class="produto3">
+        <img class="figura" src="../imagens/potequadrado.webp">
+
+        <p class="descrição">Pote quadrado com tampa</p>
+
+        <p class="preço">R$ 7, <sub>99</sub> Un</p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Avenida Amador Bueno, Penha | 18/11/2024 9:30</p>
     </div>
 
     <footer></footer>

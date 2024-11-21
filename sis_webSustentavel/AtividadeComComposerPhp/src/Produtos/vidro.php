@@ -142,7 +142,7 @@
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/lapidado.jfif">
+        <img class="figura" src="../imagens/lapidado.jfif">
 
         <p class="descrição">Garrafa de Vidro Lapidado</p>
 
@@ -152,6 +152,32 @@
         
 
         <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/garrafacoca.jpg">
+
+        <p class="descrição">Garrafa Retornavel Coca-Cola 500ml</p>
+
+        <p class="preço">R$ 15,<sub>50</sub> un</p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Penha da França | 25/10/2024 17:22</p>
+    </div>
+
+    <div class="produto3">
+        <img class="figura" src="../imagens/vidrometro.jpg">
+
+        <p class="descrição">Vidro metro quadrado</p>
+
+        <p class="preço">R$ 30,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, São Miguel | Hoje 15:30</p>
     </div>
 
     

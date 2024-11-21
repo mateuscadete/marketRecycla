@@ -151,8 +151,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
             <a href="#"><li>Latas de Bebidas</li></a>
             <a href="#"><li style="font-weight: bold;">Embalagens de alimentos</li></a>
-            <a href="#"><li>Componentes de Eletroeletrônicos</li></a>
-            <a href="#"><li>Perfis de Alumínios</li></a>
             <a href="#"><li>Resíduos de Processamento</li></a>
             <a href="#"><li>Latões e Barris</li></a>
 
@@ -174,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </aside>
 
     <div class="produto">
-        <img class="garrafa" src="../imagens/aluminio.jfif">
+        <img class="figura" src="../imagens/aluminio.jfif">
 
         <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
 
@@ -184,6 +182,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
 
         <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
+    </div>
+
+    <div class="produto2">
+        <img class="figura" src="../imagens/papelaluminio.jpg">
+
+        <p class="descrição">Papel aluminio 50 metros</p>
+
+        <p class="preço">R$ 10,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
     </div>
 
     

@@ -134,20 +134,43 @@ aside {
     height: 400px;
     position: absolute;
     top: 130%;
-    left: 60%;
+    left: 80%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.produto:hover {
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Sombra no hover */
+.produto2 {
+    background-color: #E5D9D9;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 130%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 
-.garrafa {
+.produto:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.produto2:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.produto3:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.produto4:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.figura {
     position: relative;
     padding-left: 90px;
     padding-top: 10px;
