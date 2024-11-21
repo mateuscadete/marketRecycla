@@ -117,7 +117,7 @@
     <aside>
         <h2>Plásticos</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li style="font-weight: bold;">Polietileno Tereftalato (PET)</li></a>
+            <a href="#"><li >Polietileno Tereftalato (PET)</li></a>
             <a href="#"><li>Polietileno de Alta Densidade (PEAD)</li></a>
             <a href="#"><li>Polietileno de Vinila (PVC)</li></a>
             <a href="#"><li>Polipropileno</li></a>

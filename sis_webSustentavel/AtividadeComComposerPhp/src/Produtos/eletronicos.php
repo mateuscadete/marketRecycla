@@ -116,7 +116,7 @@
     <aside>
         <h2>Eletrônicos e Metais</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li style="font-weight: bold;">Aço</li></a>
+            <a href="#"><li >Aço</li></a>
             <a href="#"><li>Cobre</li></a>
             <a href="#"><li>Dispositivos Menores</li></a>
             <a href="#"><li>Eletrônicos</li></a>

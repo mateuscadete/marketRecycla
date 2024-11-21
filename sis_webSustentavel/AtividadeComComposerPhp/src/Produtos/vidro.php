@@ -119,7 +119,7 @@
         <h2>Vidros</h2>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
             <a href="#"><li>Vidros de aquário</li></a>
-            <a href="#"><li style="font-weight: bold;">Garrafas</li></a>
+            <a href="#"><li >Garrafas</li></a>
             <a href="#"><li>Copos e pratos</li></a>
             <a href="#"><li>Embalagens</li></a>
 

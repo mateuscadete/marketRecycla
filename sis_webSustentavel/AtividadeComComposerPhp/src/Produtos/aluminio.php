@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Alumínios</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
             <a href="#"><li>Latas de Bebidas</li></a>
-            <a href="#"><li style="font-weight: bold;">Embalagens de alimentos</li></a>
+            <a href="#"><li >Embalagens de alimentos</li></a>
             <a href="#"><li>Resíduos de Processamento</li></a>
             <a href="#"><li>Latões e Barris</li></a>
 

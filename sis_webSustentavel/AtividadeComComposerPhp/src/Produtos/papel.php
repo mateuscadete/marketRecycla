@@ -117,7 +117,7 @@
     <aside>
         <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li style="font-weight: bold;">Papelão</li></a>
+            <a href="#"><li >Papelão</li></a>
             <a href="#"><li>Papel Simples</li></a>
             <a href="#"><li>Caixas de Embalagem</li></a>
             <a href="#"><li>Papelão de Produtos Eletrônico</li></a>
