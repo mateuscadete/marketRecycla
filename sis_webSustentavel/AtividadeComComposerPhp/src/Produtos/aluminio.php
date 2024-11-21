@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+<div class="content"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
@@ -138,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a href="eletronicos.php">
                         <img src="../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
+                        <div class="caption">Eletrônicos e Metais</div>
                 </div>
                 </a>
 
@@ -197,6 +198,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
     </div>
 
+    <div class="produto3">
+        <img class="figura" src="../imagens/barrilaluminio.webp">
+
+        <p class="descrição">Barril de Alumínio 30L</p>
+
+        <p class="preço">R$ 200,<sub>99</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
+    </div>
+
+    <div class="produto4">
+        <img class="figura" src="../imagens/latinha.webp">
+
+        <p class="descrição">Latinha 400ml</p>
+
+        <p class="preço">R$ 5,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Itaim Paulista | 5/11/2024 9:00</p>
+    </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

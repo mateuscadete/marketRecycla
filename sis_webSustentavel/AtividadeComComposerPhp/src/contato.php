@@ -49,7 +49,7 @@
 
                         <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
                     </button>
-</a>
+   </a>
 
             </div>
 

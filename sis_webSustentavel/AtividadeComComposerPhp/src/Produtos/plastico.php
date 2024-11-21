@@ -6,10 +6,11 @@
     <link rel="icon" href="../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Style/Produtos/plastico.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <title>Plástico - MarketRecycla</title>
 </head>
 
 <body>
+<div class="content"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
@@ -105,7 +106,7 @@
                     <a href="eletronicos.php">
                         <img src="../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
+                        <div class="caption">Eletrônicos e Metais</div>
                 </div>
                 </a>
 
@@ -154,32 +155,47 @@
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../imagens/potepet.webp">
+        <img class="figura" src="../imagens/bandeja.png">
 
-        <p class="descrição">Pote com tampa</p>
+        <p class="descrição">Bandeja Pead</p>
 
-        <p class="preço">R$ 10, <sub>00</sub></p>
+        <p class="preço">R$ 15, <sub>50</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
         
 
-        <p class="endereco">Itaquaquecetuba  | 1/11/2024 17:00</p>
+        <p class="endereco">São Paulo, Pari  | 1/11/2024 17:00</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../imagens/potequadrado.webp">
+        <img class="figura" src="../imagens/canopvc.jpeg">
 
-        <p class="descrição">Pote quadrado com tampa</p>
+        <p class="descrição">Cano PVC 1 Metro</p>
 
-        <p class="preço">R$ 7, <sub>99</sub> Un</p>
+        <p class="preço">R$ 24, <sub>99</sub> Un</p>
 
         <button class="comprar" type="submit">Comprar</button>
         
 
-        <p class="endereco">Avenida Amador Bueno, Penha | 18/11/2024 9:30</p>
+        <p class="endereco">São Paulo, Vila Jacuí | 18/11/2024 9:30</p>
     </div>
 
-    <footer></footer>
+    <div class="produto4">
+        <img class="figura" src="../imagens/cadeirapolipropileno.webp">
+
+        <p class="descrição">Cadeira Polipropileno</p>
+
+        <p class="preço">R$ 29, <sub>99</sub> Un</p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
+    </div>
+    </div>
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
+    </footer>
 
 
 

@@ -6,10 +6,11 @@
     <link rel="icon" href="../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <title>Eletrônicos e Metais - MarketRecycla</title>
 </head>
 
 <body>
+    <div class="content"></div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
@@ -105,7 +106,7 @@
                     <a href="eletronicos.php">
                         <img src="../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
+                        <div class="caption">Eletrônicos e Metais</div>
                 </div>
                 </a>
 
@@ -151,17 +152,48 @@
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../imagens/mesa.jpg">
+        <img class="figura" src="../imagens/caixadesom.jpg">
 
-        <p class="descrição">Mesa de Aço </p>
+        <p class="descrição">Caixa de Som JBL</p>
 
-        <p class="preço">R$ 100,<sub>00</sub></p>
+        <p class="preço">R$ 150,<sub>00</sub></p>
 
         <button class="comprar" type="submit">Comprar</button>
         
 
-        <p class="endereco">São Paulo, Brás | Hoje 11:10</p>
+        <p class="endereco">São Paulo, Santa Ifgênia | Hoje 11:10</p>
     </div>
+
+    <div class="produto3">
+        <img class="figura" src="../imagens/mouse.jpg">
+
+        <p class="descrição">Mouse usado</p>
+
+        <p class="preço">R$ 10,<sub>99</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">São Paulo, Santa Ifgênia | 1/11/2024</p>
+    </div>
+
+    <div class="produto4">
+        <img class="figura" src="../imagens/copocobre.webp">
+
+        <p class="descrição">Copo de Cobre</p>
+
+        <p class="preço">R$ 9,<sub>99</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Itaquaquecetuba | Hoje 11:10</p>
+    </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>

@@ -109,13 +109,17 @@
                     <a href="./Produtos/eletronicos.php">
                         <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
+                        <div class="caption">Eletrônicos e Metais</div>
                 </div>
                 </a>
 
             </div>
         </div>
     </main>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

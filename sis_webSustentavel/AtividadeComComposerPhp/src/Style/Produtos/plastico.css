@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
+html,
 body {
     background-color: #FFF4ED;
-    /* Cor de fundo */
+    height: 250%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content {
+    flex: 1;
+
+}
+
+footer {
+    flex-shrink: 0;
+
+
 
 }
 
@@ -15,13 +31,11 @@ body {
 
 .container-fluid {
     padding: 0;
-    /* Remove padding do container */
     margin-bottom: 40px;
 }
 
 .d-flex {
     height: 400px;
-    /* Altura fixa para a seção de imagens */
 }
 
 .image-container {
@@ -43,9 +57,8 @@ body {
 
 .image-container:hover .img-fluid {
     transform: scale(1.1);
-    /* Aumenta a imagem ao passar o mouse */
     filter: brightness(0.5);
-    /* Diminui o brilho ao passar o mouse */
+
 }
 
 .overlay {
@@ -92,7 +105,6 @@ body {
 
 .perfil:hover {
     opacity: 0.75;
-    /* Efeito ao passar o mouse na imagem de perfil */
 }
 
 .imagem {
@@ -116,7 +128,7 @@ aside {
     background-color: #E5D9D9;
     height: 500px;
     width: 300px;
-    margin-top: 30px;
+    margin-top: 600px;
     padding-top: 20px;
     padding-left: 20px;
     left: 20px;
@@ -163,6 +175,18 @@ aside {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.produto4 {
+    background-color: #E5D9D9;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 200%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .produto:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -187,6 +211,14 @@ aside {
     border-radius: 5px;
 }
 
+.vidro {
+    position: relative;
+    padding-left: 90px;
+    padding-top: 10px;
+    border: 3px;
+    border-radius: 5px;
+}
+
 .descrição {
     text-align: center;
     font-weight: bolder;
@@ -196,6 +228,7 @@ aside {
 .preço {
     font-size: 15px;
     font-weight: bold;
+
     padding-left: 60px;
 }
 
@@ -213,8 +246,14 @@ aside {
     font-size: 16px;
     cursor: pointer;
     margin: auto;
+    margin-bottom: 10px;
+
+
     position: relative;
+
     left: 120px;
+
+
 }
 
 .endereco {
@@ -222,7 +261,7 @@ aside {
 }
 
 a {
-    color: green
+    color: green;
 }
 
 .container {
@@ -243,5 +282,6 @@ a {
 }
 
 main {
-    margin-top: 100px;
+
+    margin-bottom: 850px;
 }

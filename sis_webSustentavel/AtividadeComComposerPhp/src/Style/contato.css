@@ -19,25 +19,22 @@ body {
 
 .contato {
 
-    margin-top: 110px;
+    margin-top: 130px;
     font-size: 15px;
     background-color: #403D36;
+    height: 510px;
     width: 450px;
-    padding: 40px 30px;
+    padding: 20px;
     padding-left: 20px;
-
-
     border-radius: 5px;
 }
 
 
 h1 {
-    font-weight: normal;
+
     color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;
+    font-size: 10px;
+
 }
 
 #nomeid,
@@ -67,7 +64,7 @@ textarea:focus {
 }
 
 .enviar {
-
+    padding-bottom: 10px;
     background-color: green;
     height: 40px;
     width: 100px;

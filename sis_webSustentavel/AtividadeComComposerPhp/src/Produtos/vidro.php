@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Style/Produtos/vidro.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <link rel="stylesheet" href="../Style/Produtos/vidro.css"> 
+    <title>Vidro - MarketRecycla</title>
 </head>
 
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
+<div class="content"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> 
         <button type="button" class="btn btn-link text-light mr-2">
             <img src="../imagens/MarketRecycla.png" alt="menu" class="logo">
         </button>
@@ -105,7 +107,7 @@
                     <a href="eletronicos.php">
                         <img src="../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
-                        <div class="caption">Eletrônicos</div>
+                        <div class="caption">Eletrônicos e Metais</div>
                 </div>
                 </a>
 
@@ -180,8 +182,24 @@
         <p class="endereco">São Paulo, São Miguel | Hoje 15:30</p>
     </div>
 
-    
+    <div class="produto4">
+        <img class="figura" src="../imagens/potevidro.webp">
 
+        <p class="descrição">Pote Vidro</p>
+
+        <p class="preço">R$ 20,<sub>00</sub></p>
+
+        <button class="comprar" type="submit">Comprar</button>
+        
+
+        <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
+    </div>
+    </div>
+    
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 MarketRecycla. Todos os direitos reservados.</p>
+    </footer>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
