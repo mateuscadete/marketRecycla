@@ -1,170 +1,173 @@
 <?php
-require_once '../vendor/autoload.php';
+require_once 'model/Carrinho.php';
 
-use App\model\Produto;
-
-$mensagem = '';  // Variável para armazenar a mensagem de sucesso ou erro
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Pega o ID do produto informado pelo usuário
-    $idProduto = $_POST['idProduto'] ?? '';
-
-    // Verifica se o ID foi informado
-    if (!empty($idProduto)) {
-        $produto = new Produto('', '', '', '');  // Cria um objeto Produto
-        $mensagem = $produto->deletar_produto($idProduto);  // Tenta deletar o produto
-    } else {
-        $mensagem = "Por favor, informe um ID de produto válido!";
-    }
-}
-
+$carrinho = new App\model\Carrinho();
+$itens = $carrinho->listarCarrinho();
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <script async src="JavaScript/carrinho.js"></script>
-  <link rel="stylesheet" href="Style/carrinho.css">
-  <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Meu Carrinho</title>
-  <style>
-
-  </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style/carrinho.css">
+    <link rel="icon" href="imagens/MR_processed.png" type="image/icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
 </head>
 
 <body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
+        <button type="button" class="btn btn-link text-light mr-2">
+            <img src="imagens/MarketRecycla.png" alt="menu" class="img-fluid">
+        </button>
+        <a class="navbar-brand" href="principal.php">MarketRecycla</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.php">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contato.php">Contato</a>
+                </li>
+            </ul>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!-- Adicionando fixed-top -->
-    <button type="button" class="btn btn-link text-light mr-2">
-      <img src="imagens/MarketRecycla.png" alt="menu" class="img-fluid">
-    </button>
-    <a class="navbar-brand" href="principal.php">MarketRecycla</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
 
-        <li class="nav-item">
-          <a class="nav-link" href="sobre.php">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contato.php">Contato</a>
-        </li>
-      </ul>
+            <div class="btn-group mx-3" role="group" aria-label="Basic example">
+            <a href="produto.php">    
+            <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
+            </a>
 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+            <a href="carrinho.php">
 
-      <div class="btn-group mx-3" role="group" aria-label="Basic example">
-        <a href="produto.php">
-          <button type="button" class="btn btn-link text-light">Cadastrar Produto</button>
-        </a>
+                
+                    <button type="button" class="btn btn-link text-light">
 
-        <a href="carrinho.php">
+                        <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
+                    </button>
+</a>
 
+            </div>
 
-          <button type="button" class="btn btn-link text-light">
-
-            <img src="imagens/Shopping cart.png" alt="Cadastrar Produto" class="car">
-          </button>
-        </a>
-
-      </div>
-
-      <a href="cadastro.php">
-        <div class="perfil">
-          <button type="button" class="btn btn-link text-light ml-3">
-            <img src="imagens/Generic avatar.png" alt="Perfil" class="ft-pefil">
-          </button>
+            <a href="cadastro.php">
+                <div class="perfil">
+                    <button type="button" class="btn btn-link text-light ml-3">
+                        <img src="imagens/Generic avatar.png" alt="Perfil" class="ft-pefil">
+                    </button>
+                </div>
+            </a>
         </div>
-      </a>
+</nav>
+    <!-- Mantenha sua navbar existente aqui -->
+    <?php include_once "navbar.php"; ?>
+
+    <div class="cart-container">
+        <div class="header">Meu Carrinho 🛒</div>
+
+        <?php if (!empty($itens) && !isset($itens['error'])): ?>
+            <?php foreach ($itens as $item): ?>
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="<?php echo htmlspecialchars($item['imagem'] ?? 'imagens/default.jpg'); ?>" 
+                             alt="<?php echo htmlspecialchars($item['nome']); ?>">
+                    </div>
+                    <div class="detalhes">
+                        <p class="name"><?php echo htmlspecialchars($item['nome']); ?></p>
+                        <p class="price">
+                            <span class="preco" data-price="<?php echo $item['preco']; ?>">
+                                R$ <?php echo number_format($item['preco'], 2, ',', '.'); ?>
+                            </span>
+                        </p>
+
+                        <div class="container">
+                            <div class="botões">
+                                <button class="menos">-</button>
+                                <span class="quantidade"><?php echo $item['qtde']; ?></span>
+                                <button class="mais">+</button>
+                            </div>
+
+                            <div class="quantity-bar">
+                                <div class="quantity-fill" style="width: 1%;"></div>
+                            </div>
+
+                            <button type="button" class="remover" 
+                                    onclick="removerProduto(<?php echo $item['idProduto']; ?>)">
+                                Remover
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            <?php endforeach; ?>
+
+            <div class="cart-footer">
+                <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
+                <button type="button" class="comprar">Finalizar Compra</button>
+            </div>
+
+        <?php else: ?>
+            <div class="empty-cart">
+                <p>Seu carrinho está vazio.</p>
+                <a href="Produtos/aluminio.php" class="btn-continuar">Continuar Comprando</a>
+            </div>
+        <?php endif; ?>
     </div>
-  </nav>
 
-  <div class="cart-container">
-    <div class="header">Meu Carrinho 🛒</div>
-
-    <div class="cart-item">
-      
-      <div class="item-image">
-        <img src="imagens/lixeirametal.jpg" alt="Lixeira">
-      </div>
-      <div class="detalhes">
-        <p class="name">Lixeira 50 litros lata de lixo americana aço galvanizado</p>
-        <p class="price"> <span class="preco" data-price="270">R$ 270,00</span></p>
-
-        <div class="container">
-          <div class="botões">
-            <button class="menos">-</button>
-            <span class="quantidade">1</span>
-            <button class="mais">+</button>
-          </div>
-
-          <div class="quantity-bar">
-            <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
-          </div>
-          <form method="POST" action="model/Deletar.php">
-    <label for="idProduto">ID do Produto:</label>
-    <input type="text" name="idProduto" id="idProduto" required>
-    <button type="submit">Deletar Produto</button>
-</form>
-        <p>
-        <?php
-        if (isset($mensagem)) {
-            echo $mensagem;
+    <!-- Mantenha seus scripts existentes -->
+    <script>
+        function removerProduto(idProduto) {
+            if (confirm('Tem certeza que deseja remover este item?')) {
+                fetch('controllers/remover_do_carrinho.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        idProduto: idProduto
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert(data.error || 'Erro ao remover produto');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao remover produto');
+                });
+            }
         }
-        ?>
-    </p>
-        </div>
-        <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
-      </div>
-    </div>
 
-    <div class="divider"></div>
-    <div class="cart-item">
-      <div class="item-image">
-        <img src="imagens/garrafapet.jfif" alt="Lixeira">
-      </div>
-      <div class="detalhes">
-        <p class="name">Garrafa Pet 2,5L</p>
-        <p class="price"><span class="preco" data-price="16">R$ 16,00</span></p>
+        // Função para atualizar o total
+        function atualizarTotal() {
+            const itens = document.querySelectorAll('.cart-item');
+            let total = 0;
 
-        <div class="container">
-          <div class="botões">
-            <button class="menos">-</button>
-            <span class="quantidade">1</span>
-            <button class="mais">+</button>
-          </div>
+            itens.forEach(item => {
+                const preco = parseFloat(item.querySelector('.preco').dataset.price);
+                const quantidade = parseInt(item.querySelector('.quantidade').textContent);
+                total += preco * quantidade;
+            });
 
-          <div class="quantity-bar">
-            <div class="quantity-fill" id="quantity-fill" style="width: 1%;"></div>
-          </div>
+            document.getElementById('valorTotal').textContent = 
+                total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
 
-          
-
-          <button type="button" class="remover">Remover</button>
-        </div>
-        <p class="localização">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:29</p>
-      </div>
-    </div>
-    <div class="divider"></div>
-    <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
-  
-    <button type="button" class="comprar">Finalizar Compra</button>
-  </div>
-
-  
-
-
-
-
+        // Chamar atualização do total quando a página carregar
+        document.addEventListener('DOMContentLoaded', atualizarTotal);
+    </script>
 </body>
-
 </html>

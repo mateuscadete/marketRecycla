@@ -22,39 +22,46 @@ class Carrinho {
     public function adicionarProduto($idProduto, $qtde) : void {
         try {
             // Verifica se o produto já existe no carrinho
-            $stmt = $this->pdo->prepare("SELECT * FROM produto WHERE idProduto = :idProduto");
+            $stmt = $this->pdo->prepare("SELECT * FROM pedido WHERE idProduto = :idProduto");
             $stmt->bindParam(':idProduto', $idProduto);
             $stmt->execute();
 
             if ($stmt->rowCount() > 0) {
                 // Se o produto já existe no carrinho, atualiza a quantidade
-                $stmt = $this->pdo->prepare("UPDATE produto SET qtde = qtde + :qtde WHERE idProduto = :idProduto");
+                $stmt = $this->pdo->prepare("UPDATE pedido SET qtde = qtde + :qtde WHERE idProduto = :idProduto");
                 $stmt->bindParam(':qtde', $qtde);
-                $stmt->bindParam('idProduto', $idProduto);
+                $stmt->bindParam(':idProduto', $idProduto);
                 $stmt->execute();
             } else {
                 // Se o produto não existe no carrinho, insere um novo registro
-                $stmt = $this->pdo->prepare("INSERT INTO produto (idProduto, qtde) VALUES (:idProduto, :qtde)");
+                $stmt = $this->pdo->prepare("INSERT INTO pedido (idProduto, qtde) VALUES (:idProduto, :qtde)");
                 $stmt->bindParam(':idProduto', $idProduto);
                 $stmt->bindParam(':qtde', $qtde);
                 $stmt->execute();
             }
 
-            // Retorna sucesso
-            echo json_encode(["message" => "Produto adicionado ao carrinho"]);
+            // Update the success response to include redirect information
+            echo json_encode([
+                "success" => true, 
+                "message" => "Produto adicionado ao carrinho",
+                "redirect" => "../carrinho.php"
+            ]);
         } catch (PDOException $e) {
-            echo json_encode(["error" => "Erro ao adicionar produto ao carrinho: " . $e->getMessage()]);
+            echo json_encode([
+                "success" => false, 
+                "error" => "Erro ao adicionar produto ao carrinho: " . $e->getMessage()
+            ]);
         }
     }
 
     // Função para remover um produto do carrinho
     public function removerProduto($idProduto) : void {
         try {
-            $stmt = $this->pdo->prepare("DELETE FROM produto WHERE idProduto = :idProduto");
+            $stmt = $this->pdo->prepare("DELETE FROM pedido WHERE idProduto = :idProduto");
             $stmt->bindParam(':idProduto', $idProduto);
             $stmt->execute();
             
-            echo json_encode(["message" => "Produto removido do carrinho"]);
+            echo json_encode(["success" => true, "message" => "Produto removido do carrinho"]);
         } catch (PDOException $e) {
             echo json_encode(["error" => "Erro ao remover produto do carrinho: " . $e->getMessage()]);
         }
@@ -63,12 +70,12 @@ class Carrinho {
     // Função para listar os produtos no carrinho
     public function listarCarrinho() {
         try {
-            $stmt = $this->pdo->query("SELECT p.nome, p.preco, c.quantidade 
-                                       FROM produto c 
-                                       JOIN produto p ON c.idProduto = p.id");
+            $stmt = $this->pdo->query("SELECT p.*, pd.qtde 
+                                      FROM pedido pd 
+                                      JOIN produto p ON pd.idProduto = p.idProduto");
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            return json_encode(["error" => "Erro ao listar produtos no carrinho: " . $e->getMessage()]);
+            return ["success" => false, "error" => "Erro ao listar produtos no carrinho: " . $e->getMessage()];
         }
     }
 }

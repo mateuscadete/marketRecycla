@@ -1,36 +1,4 @@
 
-<?php
-require_once '../../vendor/autoload.php';
-
-use App\model\Api;
-
-// Inicializa a mensagem de retorno
-$mensagem = '';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Recebe os dados enviados via POST
-    $nome = $_POST['nome'] ?? '';
-    $qtde = $_POST['qtde'] ?? '';
-    $descricao = $_POST['descricao'] ?? '';
-    $preco = $_POST['preco'] ?? '';
-
-    // Validação básica dos campos
-    if (empty($nome) || empty($qtde) || empty($descricao) || empty($preco)) {
-        $mensagem = 'Todos os campos devem ser preenchidos.';
-    } else {
-        try {
-            // Criação do objeto Produto (ajuste conforme sua classe)
-            $produto = new Produto($nome, $qtde, $descricao, $preco);
-
-            // Cadastra o produto no carrinho chamando o método da API
-            $mensagem = $produto->adicionarAoCarrinho(); // Substitua pelo método correto na classe Produto
-        } catch (Exception $e) {
-            $mensagem = 'Erro ao adicionar o produto ao carrinho: ' . $e->getMessage();
-        }
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -178,8 +146,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
 
         <p class="preço">R$ 10,<sub>95</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
         
 
         <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
@@ -191,8 +159,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="descrição">Papel aluminio 50 metros</p>
 
         <p class="preço">R$ 10,<sub>00</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
         
 
         <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
@@ -204,8 +172,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="descrição">Barril de Alumínio 30L</p>
 
         <p class="preço">R$ 200,<sub>99</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(2)">Comprar</button>
         
 
         <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
@@ -217,16 +185,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p class="descrição">Latinha 400ml</p>
 
         <p class="preço">R$ 5,<sub>00</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
         
 
         <p class="endereco">São Paulo, Itaim Paulista | 5/11/2024 9:00</p>
     </div>
     </div>
 
-    
-    
+    <script>
+        function adicionarAoCarrinho(idProduto) {
+            const quantidade = document.getElementById('qtde').value;
+            
+            fetch('../controllers/adicionar_ao_carrinho.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    idProduto: idProduto,
+                    qtde: parseInt(quantidade)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                } else {
+                    alert(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar produto ao carrinho');
+            });
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
