@@ -3,10 +3,7 @@ require_once '../vendor/autoload.php';
 include "./model/Login.php";
 use App\model\Login;
 
-use App\model\Usuario;
 $mensagem = '';
-
-
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
