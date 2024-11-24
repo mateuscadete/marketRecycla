@@ -3,7 +3,14 @@
 
 body {
     background-color: #FFF4ED;
-    /* Cor de fundo */
+    font-family: league;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
 
 }
 
