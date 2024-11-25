@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff4ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.img-fluid {
+  height: 80px;
+  width: 80px;
+
+}
+
+
+.cart-container {
+  width: 800px;
+  height: 600px;
+  margin-top: 250px;
+  background-color: #e5d5d1;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #e5d5d1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10px;
+
+}
+
+.item-image img {
+  width: 100%;
+  height: auto;
+
+}
+
+.detalhes {
+  flex-grow: 1;
+}
+
+.name {
+  margin-left: 30px;
+  font-size: 1em;
+  font-weight: bold;
+
+}
+
+.preco {
+  text-align: right;
+  padding-left: 20px;
+  color: green;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding-left: 60px;
+}
+
+.indicador {
+  font-size: 1em;
+  color: red;
+  margin-right: 5px;
+}
+
+.quantity-bar {
+  width: 210px;
+  height: 5px;
+  background-color: #f0a1a1;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+
+}
+
+.quantity-fill {
+  height: 100%;
+  width: 1%;
+  background-color: red;
+  border-radius: 5px;
+
+}
+
+.botões {
+  display: flex;
+  align-items: center;
+}
+
+.mais {
+  background-color: #ddd;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+.menos {
+  background-color: #ddd;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+.comprar {
+  position: relative;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 270px;
+  left: 50px;
+}
+
+.comprar:hover {
+  background-color: lightgreen;
+}
+
+.remover {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 3px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 10px;
+  left: 50px;
+
+}
+
+
+.localização {
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 5px;
+  padding-left: 100px;
+
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+  margin-top: 15px;
+
+
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+}
+
+li {
+  font-weight: bold;
+}
