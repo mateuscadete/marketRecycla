@@ -102,3 +102,7 @@ label {
 #nome {
     margin-right: 25px;
 }
+
+li {
+    font-weight: bold;
+}

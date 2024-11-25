@@ -95,3 +95,7 @@ body {
 .options a:hover {
     text-decoration: underline;
 }
+
+li {
+    font-weight: bold;
+}

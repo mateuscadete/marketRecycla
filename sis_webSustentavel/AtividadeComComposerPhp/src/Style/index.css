@@ -69,3 +69,7 @@ input {
 .cadastrar:hover {
     background-color: lightgreen;
 }
+
+li {
+    font-weight: bold;
+}

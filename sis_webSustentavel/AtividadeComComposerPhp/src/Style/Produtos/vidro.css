@@ -272,3 +272,7 @@ main {
 
     margin-top: 100px;
 }
+
+li {
+    font-weight: bold;
+}

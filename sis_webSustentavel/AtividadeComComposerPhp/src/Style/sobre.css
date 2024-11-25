@@ -3,7 +3,6 @@
 
 body {
     background-color: #FFF4ED;
-    /* Cor de fundo */
 }
 
 .logo {
@@ -142,5 +141,5 @@ li {
 }
 
 main {
-    margin-top: 110px;
+    margin-top: 100px;
 }
