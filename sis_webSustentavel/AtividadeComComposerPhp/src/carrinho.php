@@ -76,7 +76,7 @@ $itens = $carrinho->listarCarrinho();
 
         <?php if (!empty($itens) && !isset($itens['error'])): ?>
             <?php foreach ($itens as $item): ?>
-                <div class="cart-item">
+                <div class="cart-item" data-produto-id="<?php echo $item['idProduto']; ?>">
                     <div class="item-image">
                         <img src="<?php echo htmlspecialchars($item['imagem'] ?? 'imagens/default.jpg'); ?>" 
                              alt="<?php echo htmlspecialchars($item['nome']); ?>">
@@ -118,7 +118,7 @@ $itens = $carrinho->listarCarrinho();
         <?php else: ?>
             <div class="empty-cart">
                 <p>Seu carrinho está vazio.</p>
-                <a href="Produtos/aluminio.php" class="btn-continuar">Continuar Comprando</a>
+                <a href="principal.php" class="btn-continuar">Voltar para a página principal</a>
             </div>
         <?php endif; ?>
     </div>
@@ -127,21 +127,31 @@ $itens = $carrinho->listarCarrinho();
     <script>
         function removerProduto(idProduto) {
             if (confirm('Tem certeza que deseja remover este item?')) {
+                const formData = new FormData();
+                formData.append('idProduto', idProduto);
+
                 fetch('controllers/remover_do_carrinho.php', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        idProduto: idProduto
-                    })
+                    body: formData
                 })
-                .then(response => response.json())
+                .then(response => response.text())
                 .then(data => {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert(data.error || 'Erro ao remover produto');
+                    try {
+                        const result = JSON.parse(data);
+                        if (result.success) {
+                            // Remove the item from the DOM
+                            const itemElement = document.querySelector(`[data-produto-id="${idProduto}"]`);
+                            if (itemElement) {
+                                itemElement.remove();
+                            }
+                            // Reload the page to update the cart
+                            window.location.reload();
+                        } else {
+                            alert(result.error || 'Erro ao remover produto');
+                        }
+                    } catch (e) {
+                        console.error('Erro ao processar resposta:', e);
+                        alert('Erro ao remover produto');
                     }
                 })
                 .catch(error => {

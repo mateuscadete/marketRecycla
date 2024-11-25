@@ -147,7 +147,7 @@
 
         <p class="preço">R$ 10,<sub>95</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
@@ -160,7 +160,7 @@
 
         <p class="preço">R$ 10,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
+        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
         
 
         <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
@@ -173,7 +173,7 @@
 
         <p class="preço">R$ 200,<sub>99</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <button onclick="adicionarAoCarrinho(2)">Comprar</button>
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
@@ -186,7 +186,7 @@
 
         <p class="preço">R$ 5,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <button onclick="adicionarAoCarrinho(1)">Comprar</button>
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(1)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Itaim Paulista | 5/11/2024 9:00</p>
@@ -210,14 +210,14 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert(data.message);
+                    console.log(data.message);
                 } else {
-                    alert(data.error);
+                    console.log(data.error);
                 }
             })
             .catch(error => {
                 console.error('Erro:', error);
-                alert('Erro ao adicionar produto ao carrinho');
+                console.log('Erro ao adicionar produto ao carrinho');
             });
         }
     </script>

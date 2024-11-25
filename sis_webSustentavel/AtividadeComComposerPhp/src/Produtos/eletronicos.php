@@ -144,8 +144,8 @@
         <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 
         <p class="preço">R$ 270,<sub>00</sub></p>
-
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(5)">Comprar</button></a
         
 
         <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
@@ -158,7 +158,8 @@
 
         <p class="preço">R$ 150,<sub>00</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(6)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Santa Ifgênia | Hoje 11:10</p>
@@ -171,7 +172,8 @@
 
         <p class="preço">R$ 10,<sub>99</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Santa Ifgênia | 1/11/2024</p>
@@ -184,13 +186,41 @@
 
         <p class="preço">R$ 9,<sub>99</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(8)">Comprar</button></a>
         
 
         <p class="endereco">Itaquaquecetuba | Hoje 11:10</p>
     </div>
     
-
+    <script>
+        function adicionarAoCarrinho(idProduto) {
+            const quantidade = document.getElementById('qtde').value;
+            
+            fetch('../controllers/adicionar_ao_carrinho.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    idProduto: idProduto,
+                    qtde: parseInt(quantidade)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log(data.message);
+                } else {
+                    console.log(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar produto ao carrinho');
+            });
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

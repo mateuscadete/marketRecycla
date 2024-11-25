@@ -59,11 +59,15 @@ class Carrinho {
         try {
             $stmt = $this->pdo->prepare("DELETE FROM pedido WHERE idProduto = :idProduto");
             $stmt->bindParam(':idProduto', $idProduto);
-            $stmt->execute();
+            $result = $stmt->execute();
             
-            echo json_encode(["success" => true, "message" => "Produto removido do carrinho"]);
+            if ($result) {
+                echo json_encode(["success" => true, "message" => "Produto removido do carrinho"]);
+            } else {
+                echo json_encode(["success" => false, "error" => "Não foi possível remover o produto"]);
+            }
         } catch (PDOException $e) {
-            echo json_encode(["error" => "Erro ao remover produto do carrinho: " . $e->getMessage()]);
+            echo json_encode(["success" => false, "error" => "Erro ao remover produto do carrinho: " . $e->getMessage()]);
         }
     }
 

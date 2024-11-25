@@ -150,7 +150,9 @@
 
         <p class="preço">R$ 32,<sub>55</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+        
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(17)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
@@ -163,7 +165,9 @@
 
         <p class="preço">R$ 15,<sub>50</sub> un</p>
 
-        <button class="comprar" type="submit">Comprar</button>
+        
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(18)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Penha da França | 25/10/2024 17:22</p>
@@ -176,7 +180,9 @@
 
         <p class="preço">R$ 30,<sub>00</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+       
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(19)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, São Miguel | Hoje 15:30</p>
@@ -189,13 +195,42 @@
 
         <p class="preço">R$ 20,<sub>00</sub></p>
 
-        <button class="comprar" type="submit">Comprar</button>
+       
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(20)">Comprar</button></a>
         
 
         <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
     </div>
    
-    
+    <script>
+        function adicionarAoCarrinho(idProduto) {
+            const quantidade = document.getElementById('qtde').value;
+            
+            fetch('../controllers/adicionar_ao_carrinho.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    idProduto: idProduto,
+                    qtde: parseInt(quantidade)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console,log(data.message);
+                } else {
+                    console.log(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar produto ao carrinho');
+            });
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

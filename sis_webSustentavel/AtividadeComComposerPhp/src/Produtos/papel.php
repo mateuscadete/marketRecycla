@@ -144,7 +144,8 @@
         <img class="figura" src="../imagens/papelão.jpg">
         <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
         <p class="preço">R$ 9,<sub>99</sub></p>
-        <button class="comprar" type="submit">Comprar</button>        
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
         <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
     </div>
 
@@ -152,7 +153,8 @@
         <img class="figura" src="../imagens/jornal.png">
         <p class="descrição">Jornais Usados</p>
         <p class="preço">R$ 0,<sub>99</sub>un</p>
-        <button class="comprar" type="submit">Comprar</button>        
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
         <p class="endereco">Guarulhos | Hoje 8:30</p>
     </div>
 
@@ -160,7 +162,8 @@
         <img class="figura" src="../imagens/sacolapapelao.webp">
         <p class="descrição">Sacola Papelão</p>
         <p class="preço">R$ 5,<sub>00</sub> un</p>
-        <button class="comprar" type="submit">Comprar</button>        
+        <input type="number" id="qtde" min="1" value="1">
+       <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
         <p class="endereco">São Paulo, Vila Matilde | 12/10/2024 14:45</p>
     </div>
 
@@ -168,10 +171,38 @@
         <img class="figura" src="../imagens/caixaembalagem.jpg">
         <p class="descrição">Caixa de Embalagem</p>
         <p class="preço">R$ 10,<sub>50</sub></p>
-        <button class="comprar" type="submit">Comprar</button>        
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
         <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
     </div>
-    
+    <script>
+        function adicionarAoCarrinho(idProduto) {
+            const quantidade = document.getElementById('qtde').value;
+            
+            fetch('../controllers/adicionar_ao_carrinho.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    idProduto: idProduto,
+                    qtde: parseInt(quantidade)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log(data.message);
+                } else {
+                    console.log(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao adicionar produto ao carrinho');
+            });
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
