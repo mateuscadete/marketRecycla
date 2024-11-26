@@ -1,3 +1,38 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Coleta os dados do formulário
+    $nome = $_POST['nome'];
+    $telefone = $_POST['fone'];
+    $email = $_POST['email'];
+    $mensagem = $_POST['mensagem'];
+
+    // Endereço de e-mail para onde a mensagem será enviada
+    $destinatario = "11gabriel110211@gmail.com";
+    $assunto = "Mensagem de Contato do site MarketRecycla";
+
+    // Corpo do e-mail
+    $corpo_email = "Nome: " . $nome . "\n";
+    $corpo_email .= "Telefone: " . $telefone . "\n";
+    $corpo_email .= "Email: " . $email . "\n\n";
+    $corpo_email .= "Mensagem:\n" . $mensagem;
+
+    // Cabeçalhos do e-mail
+    $cabecalhos = "From: " . $email . "\r\n";
+    $cabecalhos .= "Reply-To: " . $email . "\r\n";
+    $cabecalhos .= "Content-Type: text/plain; charset=UTF-8";
+
+    // Enviar e-mail
+    if (mail($destinatario, $assunto, $corpo_email, $cabecalhos)) {
+        // Sucesso
+        echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'contato.php';</script>";
+    } else {
+        // Erro
+        echo "<script>alert('Erro ao enviar a mensagem. Tente novamente mais tarde.'); window.location.href = 'contato.php';</script>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -63,26 +98,26 @@
         </div>
 </nav>
 
-    <form class="contato">
+<form class="contato" method="POST" action="enviar_email.php">
+    <h1>Entre em contato</h1>
 
-        <h1>Entre em contato</h1>
+    <label for="nome" id="nome">Nome</label>
+    <input type="text" id="nomeid" placeholder="Insira o seu nome" required="required" name="nome" />
 
-        <label for="nome" id="nome">Nome</label>
-        <input type="text" id="nomeid" placeholder="Insira o seu nome" required="required" name="nome" />
-        
-        <br><br>
-        <label for="fone" id="fone">Telefone</label>
-        <input type="tel" id="foneid" placeholder="Insira seu numero" name="fone" />
-        
-        <br><br>
-        <label for="email">Email</label>
-        <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
-        
-        <br><br>
-        <textarea placeholder="Deixe sua mensagem"></textarea>
-<br><br>
-        <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
-    </form>
+    <br><br>
+    <label for="fone" id="fone">Telefone</label>
+    <input type="tel" id="foneid" placeholder="Insira seu numero" name="fone" />
+
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" id="emailid" placeholder="Insira seu email" name="email" />
+
+    <br><br>
+    <textarea placeholder="Deixe sua mensagem" name="mensagem"></textarea>
+    <br><br>
+    <input type="submit" class="enviar" value="Enviar" />
+</form>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
