@@ -1,38 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta os dados do formulário
-    $nome = $_POST['nome'];
-    $telefone = $_POST['fone'];
-    $email = $_POST['email'];
-    $mensagem = $_POST['mensagem'];
-
-    // Endereço de e-mail para onde a mensagem será enviada
-    $destinatario = "11gabriel110211@gmail.com";
-    $assunto = "Mensagem de Contato do site MarketRecycla";
-
-    // Corpo do e-mail
-    $corpo_email = "Nome: " . $nome . "\n";
-    $corpo_email .= "Telefone: " . $telefone . "\n";
-    $corpo_email .= "Email: " . $email . "\n\n";
-    $corpo_email .= "Mensagem:\n" . $mensagem;
-
-    // Cabeçalhos do e-mail
-    $cabecalhos = "From: " . $email . "\r\n";
-    $cabecalhos .= "Reply-To: " . $email . "\r\n";
-    $cabecalhos .= "Content-Type: text/plain; charset=UTF-8";
-
-    // Enviar e-mail
-    if (mail($destinatario, $assunto, $corpo_email, $cabecalhos)) {
-        // Sucesso
-        echo "<script>alert('Mensagem enviada com sucesso!'); window.location.href = 'contato.php';</script>";
-    } else {
-        // Erro
-        echo "<script>alert('Erro ao enviar a mensagem. Tente novamente mais tarde.'); window.location.href = 'contato.php';</script>";
-    }
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -98,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 </nav>
 
-<form class="contato" method="POST" action="enviar_email.php">
+<form class="contato" method="POST" action="mailto:11gabriel110211@gmail.com" enctype="text/plain">
     <h1>Entre em contato</h1>
 
     <label for="nome" id="nome">Nome</label>
