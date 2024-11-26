@@ -78,6 +78,11 @@ include 'main.php'
         <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
         <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
     </div>
+
+
+    <?php
+include "footer.php"
+?>
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;

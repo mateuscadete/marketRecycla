@@ -69,6 +69,10 @@ include "Include/main.php"
 
     </aside>
 
+
+    <?php
+include "Include/footer.php"
+?>
    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

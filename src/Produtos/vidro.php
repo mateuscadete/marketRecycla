@@ -104,6 +104,11 @@ include 'main.php'
 
         <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
     </div>
+
+
+    <?php
+include "footer.php"
+?>
    
     <script>
         function adicionarAoCarrinho(idProduto) {

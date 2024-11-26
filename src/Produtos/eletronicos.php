@@ -97,6 +97,10 @@ include 'main.php'
         <p class="endereco">Itaquaquecetuba | Hoje 11:10</p>
     </div>
     
+
+    <?php
+include "footer.php"
+?>
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;

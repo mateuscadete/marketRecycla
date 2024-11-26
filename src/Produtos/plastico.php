@@ -98,6 +98,11 @@ include 'main.php'
         <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
     
     </div>
+
+
+    <?php
+include "footer.php"
+?>
     
 
     <script>

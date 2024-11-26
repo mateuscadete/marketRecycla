@@ -14,7 +14,8 @@
 <body>
 <?php
 include "Include/navbar.php";
-include "Include/main.php"
+include "Include/main.php";
+include "Include/footer.php"
 ?>
    
 

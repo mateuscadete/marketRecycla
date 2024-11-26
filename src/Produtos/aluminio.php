@@ -96,6 +96,10 @@ include 'main.php'
     </div>
     </div>
 
+<?php
+include "footer.php"
+?>
+
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;

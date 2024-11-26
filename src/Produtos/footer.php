@@ -1,5 +1,5 @@
 
-<style>
+    <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
         .logofooter{
@@ -61,7 +61,7 @@
 <body>
     <div class="footer">
 
-        <img src="imagens/MR_processed.png" class="logofooter">
+        <img src="../imagens/MR_processed.png" class="logofooter">
         <h3>Market Recycla</h3>
         
         <div class="links">
