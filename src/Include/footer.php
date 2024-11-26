@@ -13,13 +13,13 @@
             font-weight: bold;
         }
 
-        p{
+        .geral{
             font-weight: bold;
         }
 
        
 
-        h3{
+        .marca{
             color:green;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
@@ -62,7 +62,7 @@
     <div class="footer">
 
         <img src="imagens/MR_processed.png" class="logofooter">
-        <h3>Market Recycla</h3>
+        <h3 class="marca">Market Recycla</h3>
         
         <div class="links">
             <a href="#">Política de Privacidade</a>  
@@ -74,7 +74,7 @@
 
         
 
-        <p>&copy; Todos os direitos reservados 2024</p>
+        <p class="geral">&copy; Todos os direitos reservados 2024</p>
     </div>
 </body>
 </html>

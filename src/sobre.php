@@ -22,9 +22,9 @@ include "Include/main.php"
         <h2 style="color: rgb(61, 52, 48);
     font-weight: bold;">Quem nós somos? </h2>
 
-        <h3 style="padding-left: 300px; font-weight: bold;">MarketRecycla!</h3>
+        <h3 class="marketrecycla">MarketRecycla!</h3>
 
-        <p>Já pensou em transformar o lixo em lucro? Através da nossa companhia MarketRecycla você pode vender seus
+        <p class="principal">Já pensou em transformar o lixo em lucro? Através da nossa companhia MarketRecycla você pode vender seus
             itens
             recicláveis com maior facilidade, gere um lucro e ajude o meio ambiente.</p>
 
@@ -34,11 +34,9 @@ include "Include/main.php"
         <h2 style="color: rgb(61, 52, 48);
         font-weight: bold;">Qual é nossa missão?</h2>
 
-        <h3 style="padding-left: 350px; font-weight: bold;">Facilitar!</h3>
+        <h3 class="facilitar">Facilitar!</h3>
 
-        <p>No MarketRecycla, acreditamos que a reciclagem deve ser sempre acessível à todos. Nossa missão é conectar
-            pessoas
-            que querem vender seus recicláveis com aqueles que buscam comprá-los, criando uma comunidade que valoriza á
+        <p class="sub">No MarketRecycla, acreditamos que a reciclagem deve ser sempre acessível à todos. Nossa missão é conectar pessoas que querem vender seus recicláveis com aqueles que buscam comprá-los, criando uma comunidade que valoriza á
             sustentabilidade e a economia circular.</p>
 
     </aside>
@@ -63,7 +61,7 @@ include "Include/main.php"
             </ol>
 
             <h3 >Junte-se a Nós</h3>
-                <p >Ao escolher nossos produtos reciclavéis, você não está apenas fazendo uma compra; está fazendo parte de um movimento em prol de um futuro mais verde. Explore nosso catálogo e descubra como pequenas mudanças podem ter um grande impacto. Sua escolha conta!</p>
+                <p class="nos">Ao escolher nossos produtos reciclavéis, você não está apenas fazendo uma compra; está fazendo parte de um movimento em prol de um futuro mais verde. Explore nosso catálogo e descubra como pequenas mudanças podem ter um grande impacto. Sua escolha conta!</p>
 
                 <p>Faça parte da mudança. Escolha sustentabilidade. <b>Escolha MarketRecycla!</b></p>
 
