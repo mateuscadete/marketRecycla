@@ -68,6 +68,20 @@ include '../main.php'
         <p class="endereco">São Paulo, Penha | Hoje 11:40</p>
     </div>
 
+    <div class="produto4">
+        <img class="figura" src="../../imagens/talheresaço.jpg">
+
+        <p class="descrição">Talheres de Aço</p>
+
+        <p class="preço">R$ 14,<sub>99</sub></p>
+
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
+        
+
+        <p class="endereco">São Paulo, Casa Verde | Hoje 10:30</p>
+    </div>
+
    
 
     <?php

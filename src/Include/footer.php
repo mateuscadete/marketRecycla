@@ -75,7 +75,7 @@
 
     .footer {
         font-size: 14px;
-        width: 10px;
+        
     }
 
     .marca{

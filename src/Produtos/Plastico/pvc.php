@@ -28,31 +28,31 @@ include '../main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/garrafapet.jfif">
+        <img class="figura" src="../../imagens/canosoldavel.jfif">
 
-        <p class="descrição">Garrafa PET 1,5L</p>
+        <p class="descrição">Cano Soldável</p>
 
-        <p class="preço">R$ 16, <sub>99</sub></p>
+        <p class="preço">R$ 6, <sub>99</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
         
 
-        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+        <p class="endereco">São Paulo, Carlos de Campos | Hoje 16:22</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/bandeja.png">
+        <img class="figura" src="../../imagens/cone.webp">
 
-        <p class="descrição">Bandeja Pead</p>
+        <p class="descrição">Cone Preto e Amarelo</p>
 
-        <p class="preço">R$ 15, <sub>50</sub></p>
+        <p class="preço">R$ 25, <sub>50</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Pari  | 1/11/2024 17:00</p>
+        <p class="endereco">São Paulo, São Miguel  | Hoje 17:00</p>
     </div>
 
     <div class="produto3">
@@ -69,19 +69,7 @@ include '../main.php'
         <p class="endereco">São Paulo, Vila Jacuí | 18/11/2024 9:30</p>
     </div>
 
-    <div class="produto4">
-        <img class="figura" src="../../imagens/cadeirapolipropileno.webp">
-
-        <p class="descrição">Cadeira Polipropileno</p>
-
-        <p class="preço">R$ 29, <sub>99</sub> Un</p>
-
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
-
-        <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
-    
-    </div>
+  
 
 
     <?php
@@ -93,7 +81,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

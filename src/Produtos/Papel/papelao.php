@@ -17,7 +17,7 @@ include '../main.php'
 ?>
  
 
-    <aside>
+ <aside>
         <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
             <a href="papelao.php"><li >Papelão</li></a>
@@ -37,30 +37,21 @@ include '../main.php'
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/jornal.png">
-        <p class="descrição">Jornais Usados</p>
-        <p class="preço">R$ 0,<sub>99</sub>un</p>
+        <img class="figura" src="../../imagens/papelao.png">
+        <p class="descrição">Papelao A4</p>
+        <p class="preço">R$ 3,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
-        <p class="endereco">Guarulhos | Hoje 8:30</p>
+       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
+        <p class="endereco">São Paulo, Itaim Paulista | 2/10/2024 10:00</p>
     </div>
 
     <div class="produto3">
         <img class="figura" src="../../imagens/sacolapapelao.webp">
         <p class="descrição">Sacola Papelão</p>
-        <p class="preço">R$ 5,<sub>00</sub> un</p>
-        <input type="number" id="qtde" min="1" value="1">
-       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
-        <p class="endereco">São Paulo, Vila Matilde | 12/10/2024 14:45</p>
-    </div>
-
-    <div class="produto4">
-        <img class="figura" src="../../imagens/caixaembalagem.jpg">
-        <p class="descrição">Caixa de Embalagem</p>
-        <p class="preço">R$ 10,<sub>50</sub></p>
+        <p class="preço">R$ 5,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
-        <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
+        <p class="endereco">São Paulo, VIla Matilde | 12/10/2024 14:45</p>
     </div>
 
 
@@ -71,7 +62,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -28,41 +28,33 @@ include '../main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/papelão.jpg">
-        <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
-        <p class="preço">R$ 9,<sub>99</sub></p>
+        <img class="figura" src="../../imagens/caixacelular.jpg">
+        <p class="descrição">Caixa de Celular</p>
+        <p class="preço">R$ 11,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
-        <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
+        <p class="endereco">São Paulo, Santana | 21/10/2024 8:30</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/jornal.png">
-        <p class="descrição">Jornais Usados</p>
-        <p class="preço">R$ 0,<sub>99</sub>un</p>
+        <img class="figura" src="../../imagens/caixaeletronicos.jpg">
+        <p class="descrição">Caixinha Quadrada</p>
+        <p class="preço">R$ 10,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
-        <p class="endereco">Guarulhos | Hoje 8:30</p>
+        <p class="endereco">São Paulo, São Miguel | Hoje 10:30</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/sacolapapelao.webp">
-        <p class="descrição">Sacola Papelão</p>
+        <img class="figura" src="../../imagens/embalagem.jpeg">
+        <p class="descrição">Caixa Embalagem</p>
         <p class="preço">R$ 5,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
-        <p class="endereco">São Paulo, Vila Matilde | 12/10/2024 14:45</p>
+        <p class="endereco">São Paulo, Butantã | 25/10/2024 9:25</p>
     </div>
 
-    <div class="produto4">
-        <img class="figura" src="../../imagens/caixaembalagem.jpg">
-        <p class="descrição">Caixa de Embalagem</p>
-        <p class="preço">R$ 10,<sub>50</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
-        <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
-    </div>
-
+   
 
     <?php
 include '../footer.php'
@@ -71,7 +63,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

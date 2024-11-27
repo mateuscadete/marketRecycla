@@ -28,9 +28,9 @@ include '../main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/garrafapet.jfif">
+        <img class="figura" src="../../imagens/isopor.jfif">
 
-        <p class="descrição">Garrafa PET 1,5L</p>
+        <p class="descrição">Isopor Quadrado</p>
 
         <p class="preço">R$ 16, <sub>99</sub></p>
 
@@ -38,50 +38,24 @@ include '../main.php'
         <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
         
 
-        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 17:24</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/bandeja.png">
+        <img class="figura" src="../../imagens/frasco120ml.webp">
 
-        <p class="descrição">Bandeja Pead</p>
+        <p class="descrição">Frasco 500ml</p>
 
-        <p class="preço">R$ 15, <sub>50</sub></p>
+        <p class="preço">R$ 6, <sub>50</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Pari  | 1/11/2024 17:00</p>
+        <p class="endereco">São Paulo, Penha  | 1/11/2024 17:00</p>
     </div>
 
-    <div class="produto3">
-        <img class="figura" src="../../imagens/canopvc.jpeg">
-
-        <p class="descrição">Cano PVC 1 Metro</p>
-
-        <p class="preço">R$ 24, <sub>99</sub> Un</p>
-
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(15)">Comprar</button></a>
-        
-
-        <p class="endereco">São Paulo, Vila Jacuí | 18/11/2024 9:30</p>
-    </div>
-
-    <div class="produto4">
-        <img class="figura" src="../../imagens/cadeirapolipropileno.webp">
-
-        <p class="descrição">Cadeira Polipropileno</p>
-
-        <p class="preço">R$ 29, <sub>99</sub> Un</p>
-
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
-
-        <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
     
-    </div>
 
 
     <?php
@@ -93,7 +67,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

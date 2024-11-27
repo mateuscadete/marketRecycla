@@ -5,73 +5,95 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Style/Produtos/papel.css"> <!-- Link para seu CSS -->
-    <title>Papel - MarketRecycla</title>
+    <link rel="stylesheet" href="../../Style/Produtos/plastico.css"> <!-- Link para seu CSS -->
+    <title>Plástico - MarketRecycla</title>
 </head>
 
 <body>
-    
+
 <?php
 include '../navbar.php';
 include '../main.php'
 ?>
  
-
     <aside>
-        <h2>Papel</h3>
+        <h2>Plásticos</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="papelao.php"><li >Papelão</li></a>
-            <a href="papelsimples.php"><li>Papel Simples</li></a>
-            <a href="caixa.php"><li>Caixas de Embalagem</li></a>
-            <a href="papeleletronico.php"><li>Papelão de Produtos Eletrônico</li></a>
-        
+            <a href="pet.php"><li >Polietileno Tereftalato (PET)</li></a>
+            <a href="pead.php"><li>Polietileno de Alta Densidade (PEAD)</li></a>
+            <a href="pvc.php"><li>Polietileno de Vinila (PVC)</li></a>
+            <a href="polipropileno.php"><li>Polipropileno</li></a>
+            <a href="poliestireno.php"><li>Poliestireno</li></a>
+
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/papelão.jpg">
-        <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
-        <p class="preço">R$ 9,<sub>99</sub></p>
+        <img class="figura" src="../../imagens/garrafapet.jfif">
+
+        <p class="descrição">Garrafa PET 1,5L</p>
+
+        <p class="preço">R$ 16, <sub>99</sub></p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
-        <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
+        <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
+        
+
+        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/jornal.png">
-        <p class="descrição">Jornais Usados</p>
-        <p class="preço">R$ 0,<sub>99</sub>un</p>
+        <img class="figura" src="../../imagens/potepet.webp">
+
+        <p class="descrição">Pote Pet</p>
+
+        <p class="preço">R$ 10, <sub>50</sub></p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
-        <p class="endereco">Guarulhos | Hoje 8:30</p>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
+        
+
+        <p class="endereco">Guarulhos  | 5/11/2024 13:00</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/sacolapapelao.webp">
-        <p class="descrição">Sacola Papelão</p>
-        <p class="preço">R$ 5,<sub>00</sub> un</p>
+        <img class="figura" src="../../imagens/potequadrado.webp">
+
+        <p class="descrição">Pote Quadrado</p>
+
+        <p class="preço">R$ 9, <sub>99</sub> Un</p>
+
         <input type="number" id="qtde" min="1" value="1">
-       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
-        <p class="endereco">São Paulo, Vila Matilde | 12/10/2024 14:45</p>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(15)">Comprar</button></a>
+        
+
+        <p class="endereco">São Paulo, Parque Dom Pedro II | Hoje 15:30</p>
     </div>
 
     <div class="produto4">
-        <img class="figura" src="../../imagens/caixaembalagem.jpg">
-        <p class="descrição">Caixa de Embalagem</p>
-        <p class="preço">R$ 10,<sub>50</sub></p>
+        <img class="figura" src="../../imagens/potecreme.webp">
+
+        <p class="descrição">Pote para Creme</p>
+
+        <p class="preço">R$ 5, <sub>99</sub> Un</p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
-        <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
+
+        <p class="endereco">São Paulo, Tatuapé | 22/11/2024 12:20</p>
+    
     </div>
 
 
     <?php
 include '../footer.php'
 ?>
+    
+
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

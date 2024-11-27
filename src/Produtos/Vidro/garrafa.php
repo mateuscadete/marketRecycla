@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Style/Produtos/aluminio.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <link rel="stylesheet" href="../../Style/Produtos/vidro.css"> 
+    <title>Vidro - MarketRecycla</title>
 </head>
+
 
 <body>
 
@@ -16,84 +17,87 @@ include '../navbar.php';
 include '../main.php'
 ?>
  
-
     <aside>
-        <h2>Alumínios</h3>
+        <h2>Vidros</h2>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="latasbebidas.php"><li>Latas de Bebidas</li></a>
-            <a href="embalagens.php"><li style="font-weight: bold;">Embalagens de alimentos</li></a>
+            <a href="aquario.php"><li>Vidros de aquário</li></a>
+            <a href="garrafa.php"><li >Garrafas</li></a>
+            <a href="copospratos.php"><li>Copos e pratos</li></a>
+            <a href="embalagens.php"><li>Embalagens</li></a>
             
-            <a href="latoesbarris.php"><li>Latões e Barris</li></a>
-
 
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/latamilho.jpg">
+        <img class="figura" src="../../imagens/lapidado.jfif">
 
-        <p class="descrição">Latinha Para Mantimento</p>
+        <p class="descrição">Garrafa de Vidro Lapidado</p>
 
-        <p class="preço">R$ 7,<sub>99</sub></p>
+        <p class="preço">R$ 32,<sub>55</sub></p>
+
+        
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(17)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Vila Jacuí | Hoje 13:40</p>
+        <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/aluminio.jfif">
+        <img class="figura" src="../../imagens/garrafacoca.jpg">
 
-        <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
+        <p class="descrição">Garrafa Retornavel Coca-Cola 500ml</p>
 
-        <p class="preço">R$ 10,<sub>95</sub></p>
+        <p class="preço">R$ 15,<sub>50</sub> un</p>
+
+        
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(18)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
+        <p class="endereco">São Paulo, Penha da França | 25/10/2024 17:22</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/papelaluminio.jpg">
+        <img class="figura" src="../../imagens/garrafa1l.png">
 
-        <p class="descrição">Papel aluminio 50 metros</p>
+        <p class="descrição">Garrafa 1,5L </p>
 
         <p class="preço">R$ 10,<sub>00</sub></p>
+
+       
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(19)">Comprar</button></a>
         
 
-        <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
+        <p class="endereco">Guarulhos | Hoje 12:05</p>
     </div>
 
     <div class="produto4">
-        <img class="figura" src="../../imagens/potesaluminio.png">
+        <img class="figura" src="../../imagens/potevidro.webp">
 
-        <p class="descrição">Potes de Aluminio</p>
+        <p class="descrição">Pote Vidro</p>
 
-        <p class="preço">R$ 30,<sub>00</sub></p>
+        <p class="preço">R$ 20,<sub>00</sub></p>
+
+       
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(20)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Jardim Belém | 16/11/2024 15:25</p>
+        <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
     </div>
 
-   
 
-
-    </div>
-
-<?php
+    <?php
 include '../footer.php'
 ?>
-
+   
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('/../controllers/adicionar_ao_carrinho.php', {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -106,14 +110,14 @@ include '../footer.php'
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    console.log(data.message);
+                    console,log(data.message);
                 } else {
                     console.log(data.error);
                 }
             })
             .catch(error => {
                 console.error('Erro:', error);
-                console.log('Erro ao adicionar produto ao carrinho');
+                alert('Erro ao adicionar produto ao carrinho');
             });
         }
     </script>

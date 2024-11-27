@@ -29,65 +29,51 @@ include '../main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/lapidado.jfif">
+        <img class="figura" src="../../imagens/pratope.jpg">
 
-        <p class="descrição">Garrafa de Vidro Lapidado</p>
+        <p class="descrição">Prato com Apoio</p>
 
-        <p class="preço">R$ 32,<sub>55</sub></p>
+        <p class="preço">R$ 23,<sub>55</sub></p>
 
         
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(17)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Jd das Oliveiras | Hoje 16:22</p>
+        <p class="endereco">São Paulo, Pari | 17/11/2024 8:00</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/garrafacoca.jpg">
+        <img class="figura" src="../../imagens/copo.jpg">
 
-        <p class="descrição">Garrafa Retornavel Coca-Cola 500ml</p>
+        <p class="descrição">Copo</p>
 
-        <p class="preço">R$ 15,<sub>50</sub> un</p>
+        <p class="preço">R$ 11,<sub>50</sub> un</p>
 
         
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(18)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Penha da França | 25/10/2024 17:22</p>
+        <p class="endereco">São Paulo, Penha | 25/10/2024 17:22</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/vidrometro.jpg">
+        <img class="figura" src="../../imagens/prato.jpg">
 
-        <p class="descrição">Vidro metro quadrado</p>
+        <p class="descrição">Prato</p>
 
-        <p class="preço">R$ 30,<sub>00</sub></p>
+        <p class="preço">R$ 19,<sub>00</sub></p>
 
        
         <input type="number" id="qtde" min="1" value="1">
         <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(19)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, São Miguel | Hoje 15:30</p>
+        <p class="endereco">Guarulhos | 30/10/2024 12:30</p>
     </div>
 
-    <div class="produto4">
-        <img class="figura" src="../../imagens/potevidro.webp">
-
-        <p class="descrição">Pote Vidro</p>
-
-        <p class="preço">R$ 20,<sub>00</sub></p>
-
-       
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(20)">Comprar</button></a>
-        
-
-        <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>
-    </div>
-
+    
 
     <?php
 include '../footer.php'
@@ -97,7 +83,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../../controllers/adicionar_ao_carrinho.php',  {
+            fetch('../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
