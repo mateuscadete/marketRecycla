@@ -33,7 +33,7 @@
             padding: 20px 0;
             width: 100%;
             
-            margin-top: 300%;
+            margin-top: 600%;
             
         }
         .footer a {
@@ -44,18 +44,37 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        .footer .social-icons {
-            position: relative;
-            margin-left: 70%;
-            margin-top:10px;          
-        }
+            
+        @media (max-width: 768px) {
+    .logofooter {
+        right: 0;
+        margin: 0 auto;
+        display: block;
+    }
 
-        @media (max-width: 600px) {
-            .footer {
-                font-size: 14px;
-            }
+    h3 {
+        position: static;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logofooter {
+        height: 60px;
+        width: 60px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+        
            
-        }
+        
     </style>
 </head>
 <body>

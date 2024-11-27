@@ -25,11 +25,7 @@ include 'main.php'
             <a href="#"><li>Polipropileno</li></a>
             <a href="#"><li>Poliestireno</li></a>
             
-            <div class="container">
-        <h2>Preço Max</h2>
-        <div id="preco">R$ 100,00</div>
-        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
-    </div>
+            
 
     <script>
         const precoDisplay = document.getElementById("preco");

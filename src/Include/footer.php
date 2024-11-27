@@ -1,4 +1,3 @@
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
@@ -44,18 +43,52 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        .footer .social-icons {
-            position: relative;
-            margin-left: 70%;
-            margin-top:10px;          
-        }
+            
+        @media (max-width: 768px) {
+    .logofooter {
+        right: 0;
+        margin: 0 auto;
+        display: block;
+    }
 
-        @media (max-width: 600px) {
-            .footer {
-                font-size: 14px;
-            }
+    .marca {
+        position: static;
+        padding-left: 10px;
+        
+    }
+
+    .geral{
+        padding-left: 10px;
+    }
+
+    .footer {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logofooter {
+        height: 60px;
+        width: 60px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .marca{
+        position: static;
+        text-align: center;
+    }
+    
+    .geral{
+        position:static;
+        padding-left: 8px;
+    }
+}
+        
            
-        }
+        
     </style>
 </head>
 <body>
