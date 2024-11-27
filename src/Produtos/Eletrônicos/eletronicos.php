@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../imagens/MR_processed.png" type="image/icon">
+    <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
+    <link rel="stylesheet" href="../../Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
     <title>Eletrônicos e Metais - MarketRecycla</title>
 </head>
 
 <body>
     
 <?php
-include 'navbar.php';
-include 'main.php'
+include '../navbar.php';
+include '../main.php'
 ?>
  
 
@@ -25,11 +25,7 @@ include 'main.php'
             <a href="#"><li>Dispositivos Menores</li></a>
             <a href="#"><li>Eletrônicos</li></a>
 
-            <div class="container">
-        <h2>Preço Max</h2>
-        <div id="preco">R$ 100,00</div>
-        <input type="range" id="precoSlider" min="0" max="500" value="100" class="slider">
-    </div>
+            
 
     <script>
         const precoDisplay = document.getElementById("preco");
@@ -43,55 +39,55 @@ include 'main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../imagens/lixeirametal.jpg">
+        <img class="figura" src="../../imagens/lixeirametal.jpg">
 
         <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 
         <p class="preço">R$ 270,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(5)">Comprar</button></a
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(5)">Comprar</button></a
         
 
         <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../imagens/caixadesom.jpg">
+        <img class="figura" src="../../imagens/caixadesom.jpg">
 
         <p class="descrição">Caixa de Som JBL</p>
 
         <p class="preço">R$ 150,<sub>00</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(6)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(6)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Santa Ifgênia | Hoje 11:10</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../imagens/mouse.jpg">
+        <img class="figura" src="../../imagens/mouse.jpg">
 
         <p class="descrição">Mouse usado</p>
 
         <p class="preço">R$ 10,<sub>99</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Santa Ifgênia | 1/11/2024</p>
     </div>
 
     <div class="produto4">
-        <img class="figura" src="../imagens/copocobre.webp">
+        <img class="figura" src="../../imagens/copocobre.webp">
 
         <p class="descrição">Copo de Cobre</p>
 
         <p class="preço">R$ 9,<sub>99</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../carrinho.php"> <button onclick="adicionarAoCarrinho(8)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(8)">Comprar</button></a>
         
 
         <p class="endereco">Itaquaquecetuba | Hoje 11:10</p>
@@ -99,7 +95,7 @@ include 'main.php'
     
 
     <?php
-include "footer.php"
+include '../footer.php'
 ?>
     <script>
         function adicionarAoCarrinho(idProduto) {

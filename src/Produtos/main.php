@@ -6,8 +6,8 @@
 
 
                 <div class="image-container">
-                    <a href="plastico.php">
-                        <img src="../imagens/Plastico.png" alt="Plástico" class="img-fluid">
+                    <a href="../Plastico/plastico.php">
+                        <img src="../../imagens/Plastico.png" alt="Plástico" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Plástico</div>
                 </div>
@@ -15,8 +15,8 @@
 
 
                 <div class="image-container">
-                    <a href="vidro.php">
-                        <img src="../imagens/Vidro.png" alt="Vidro" class="img-fluid">
+                    <a href="../Vidro/vidro.php">
+                        <img src="../../imagens/Vidro.png" alt="Vidro" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Vidro</div>
                 </div>
@@ -24,8 +24,8 @@
 
 
                 <div class="image-container">
-                    <a href="aluminio.php">
-                        <img src="../imagens/Metal.png" alt="Metal" class="img-fluid">
+                    <a href="../Aluminio/aluminio.php">
+                        <img src="../../imagens/Metal.png" alt="Metal" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Alumínio</div>
                 </div>
@@ -33,8 +33,8 @@
 
 
                 <div class="image-container">
-                    <a href="papel.php">
-                        <img src="../imagens/Papel.png" alt="Papel" class="img-fluid">
+                    <a href="../Papel/papel.php">
+                        <img src="../../imagens/Papel.png" alt="Papel" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Papel</div>
                 </div>
@@ -42,8 +42,8 @@
 
 
                 <div class="image-container">
-                    <a href="eletronicos.php">
-                        <img src="../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
+                    <a href="../Eletrônicos/eletronicos.php">
+                        <img src="../../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Eletrônicos e Metais</div>
                 </div>

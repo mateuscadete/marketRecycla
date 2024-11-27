@@ -6,7 +6,7 @@
 
 
                 <div class="image-container">
-                    <a href="./Produtos/plastico.php">
+                    <a href=".././Produtos/Plastico/plastico.php">
                         <img src="imagens/Plastico.png" alt="Plástico" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Plástico</div>
@@ -15,7 +15,7 @@
 
 
                 <div class="image-container">
-                    <a href="./Produtos/vidro.php">
+                    <a href=".././Produtos/Vidro/vidro.php">
                         <img src="imagens/Vidro.png" alt="Vidro" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Vidro</div>
@@ -24,7 +24,7 @@
 
 
                 <div class="image-container">
-                    <a href="./Produtos/aluminio.php">
+                    <a href=".././Produtos/Aluminio/aluminio.php">
                         <img src="imagens/Metal.png" alt="Metal" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Alumínio</div>
@@ -33,7 +33,7 @@
 
 
                 <div class="image-container">
-                    <a href="./Produtos/papel.php">
+                    <a href=".././Produtos/Papel/papel.php">
                         <img src="imagens/Papel.png" alt="Papel" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Papel</div>
@@ -42,7 +42,7 @@
 
 
                 <div class="image-container">
-                    <a href="./Produtos/eletronicos.php">
+                    <a href=".././Produtos/Eletrônicos/eletronicos.php">
                         <img src="imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Eletrônicos e Metais</div>
