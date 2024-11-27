@@ -1,4 +1,5 @@
 <?php
+require_once 'Api.php';
 require_once 'model/Carrinho.php';
 
 $carrinho = new App\model\Carrinho();
@@ -78,7 +79,7 @@ $itens = $carrinho->listarCarrinho();
             <?php foreach ($itens as $item): ?>
                 <div class="cart-item" data-produto-id="<?php echo $item['idProduto']; ?>">
                     <div class="item-image">
-                        <img src="<?php echo htmlspecialchars($item['imagem'] ?? 'imagens/default.jpg'); ?>" 
+                        <img src="<?php echo htmlspecialchars($item['imagem'] ?? 'imagens/caixa.jpg'); ?>" 
                              alt="<?php echo htmlspecialchars($item['nome']); ?>">
                     </div>
                     <div class="detalhes">

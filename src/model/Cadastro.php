@@ -26,14 +26,14 @@ class Cadastro {
             $pdo = ConnectionFactory::getConnection();
             
             // Criptografa a senha usando password_hash
-            $senhaHash = password_hash($this->senha, PASSWORD_DEFAULT);
+           // $senhaHash = password_hash($this->senha, PASSWORD_DEFAULT);
             
             // Prepara a consulta para inserir o novo usuário
             $stmt = $pdo->prepare("INSERT INTO usuario (nome, senha, email, cpf) VALUES (:nome, :senha, :email, :cpf)");
             $stmt->bindParam(':nome', $this->nome);
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':cpf', $this->cpf);
-            $stmt->bindParam(':senha', $senhaHash); // Usa a senha criptografada
+            $stmt->bindParam(':senha', $this->senha); // Usa a senha criptografada
             $stmt->execute();
 
             header("Location:principal.php");

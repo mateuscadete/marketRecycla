@@ -11,6 +11,10 @@ class ComposerStaticInitd093924bc6e73a856b7808057cd1d900
         array (
             'Stripe\\' => 7,
         ),
+        'M' => 
+        array (
+            'MercadoPago\\' => 12,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -21,6 +25,10 @@ class ComposerStaticInitd093924bc6e73a856b7808057cd1d900
         'Stripe\\' => 
         array (
             0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'MercadoPago\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago',
         ),
         'App\\' => 
         array (
