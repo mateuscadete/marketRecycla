@@ -27,18 +27,13 @@ body {
 .image-container {
     position: relative;
     flex: 1;
-    /* Faz as divs de imagem ocuparem espaço igual */
     overflow: hidden;
-    /* Para ocultar partes da imagem que saem do contêiner */
 }
 
 .img-fluid {
     width: 100%;
-    /* Ocupa toda a largura do contêiner */
     height: auto;
-    /* Altura automática para manter proporção */
     transition: transform 0.3s ease, filter 0.3s;
-    /* Transição suave */
 }
 
 .image-container:hover .img-fluid {
@@ -54,39 +49,30 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* Cor escura */
     opacity: 0;
-    /* Inicialmente invisível */
     transition: opacity 0.3s;
-    /* Transição suave */
 }
 
 .image-container:hover .overlay {
     opacity: 1;
-    /* Fica visível ao passar o mouse */
 }
 
 .caption {
     position: absolute;
     bottom: 50%;
-    /* Ajustado para subir até a metade da imagem */
     left: 50%;
     transform: translate(-50%, 50%);
-    /* Mantém a centralização horizontal */
     color: white;
     font-size: 1.5rem;
     opacity: 0;
-    /* Inicialmente invisível */
     transition: opacity 0.5s, transform 0.5s;
-    /* Transição suave */
     display: flex;
 }
 
 .image-container:hover .caption {
     opacity: 1;
-    /* Fica visível ao passar o mouse */
     transform: translate(-50%, -50%);
-    /* Move a legenda para cima */
+
 }
 
 .perfil:hover {
@@ -95,26 +81,22 @@ body {
 
 .imagem {
     width: 20%;
-    /* Ajusta o tamanho das imagens */
     transition: filter 0.3s;
-    /* Transição suave para o efeito */
 }
 
 .imagem:hover {
     filter: brightness(0.5);
-    /* Diminui o brilho para 50% ao passar o mouse */
 }
 
 .image-container {
     margin: 0;
-    /* Remove a margem entre as imagens */
 }
 
 aside {
     background-color: #E5D9D9;
-    height: 500px;
-    width: 300px;
-    margin-top: 750px;
+    height: 300px;
+    width: 600px;
+    margin-top: 5px;
     padding-top: 20px;
     padding-left: 20px;
     left: 20px;
@@ -275,4 +257,116 @@ main {
 
 li {
     font-weight: bold;
+}
+
+@media (max-width: 1124px) {
+
+    aside {
+        margin-top: 1px;
+        width: 600px;
+        height: 300px;
+
+    }
+
+    .produto {
+        width: 350px;
+        height: 350px;
+        top: 180%;
+        left: 80%;
+    }
+
+    .produto2 {
+        width: 350px;
+        height: 350px;
+        top: 180%;
+        left: 30%;
+    }
+
+    .produto3 {
+        width: 350px;
+        height: 350px;
+        top: 250%;
+        left: 30%;
+    }
+
+    .produto4 {
+        width: 350px;
+        height: 350px;
+        top: 250%;
+        left: 80%;
+    }
+
+    .figura {
+        position: relative;
+        width: 250px;
+        height: 170px;
+        padding-left: 100px;
+    }
+
+    .preço {
+        font-size: 18px;
+    }
+
+    .descrição {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+
+    aside {
+        margin-top: -100px;
+        margin-bottom: 100px;
+        width: 400px;
+        height: 250px;
+        font-size: 16px;
+
+    }
+
+
+    .produto {
+        width: 350px;
+        height: 350px;
+        top: 150%;
+        left: 50%;
+    }
+
+    .produto2 {
+        width: 350px;
+        height: 350px;
+        top: 220%;
+        left: 50%;
+    }
+
+    .produto3 {
+        width: 350px;
+        height: 350px;
+        top: 290%;
+        left: 50%;
+    }
+
+    .produto4 {
+        width: 350px;
+        height: 350px;
+        top: 360%;
+        left: 50%;
+    }
+
+    .figura {
+        position: relative;
+        width: 250px;
+        height: 170px;
+        padding-left: 100px;
+    }
+
+    .preço {
+        font-size: 18px;
+    }
+
+    .descrição {
+        font-size: 16px;
+    }
+
 }

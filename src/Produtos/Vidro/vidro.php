@@ -24,17 +24,6 @@ include '../main.php'
             <a href="#"><li >Garrafas</li></a>
             <a href="#"><li>Copos e pratos</li></a>
             <a href="#"><li>Embalagens</li></a>
-
-    <script>
-        const precoDisplay = document.getElementById("preco");
-        const precoSlider = document.getElementById("precoSlider");
-
-        precoSlider.addEventListener("input", function() {
-            let valor = precoSlider.value;
-            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
-        });
-    </script>
-
             
 
     </aside>

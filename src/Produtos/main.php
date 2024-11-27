@@ -42,7 +42,7 @@
 
 
                 <div class="image-container">
-                    <a href="../Eletrônicos/eletronicos.php">
+                    <a href="../Eletronicos/eletronicos.php">
                         <img src="../../imagens/Eletronicos.png" alt="Eletrônicos" class="img-fluid">
                         <div class="overlay"></div>
                         <div class="caption">Eletrônicos e Metais</div>

@@ -25,16 +25,6 @@ include '../main.php'
             <a href="#"><li>Caixas de Embalagem</li></a>
             <a href="#"><li>Papelão de Produtos Eletrônico</li></a>
         
-
-    <script>
-        const precoDisplay = document.getElementById("preco");
-        const precoSlider = document.getElementById("precoSlider");
-
-        precoSlider.addEventListener("input", function() {
-            let valor = precoSlider.value;
-            precoDisplay.innerText = `R$ ${parseFloat(valor).toFixed(2)}`;
-        });
-    </script>
     </aside>
 
     <div class="produto">

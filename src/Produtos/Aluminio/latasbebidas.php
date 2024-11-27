@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,10 +17,10 @@ include '../main.php'
 ?>
  
 
-    <aside>
+ <aside>
         <h2>Alumínios</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="latasbebidas.php"><li>Latas de Bebidas</li></a>
+            <a href="latasbebidas.php"><li style="font-weight:bold;">Latas de Bebidas</li></a>
             <a href="embalagens.php"><li >Embalagens de alimentos</li></a>
             
             <a href="latoesbarris.php"><li>Latões e Barris</li></a>
@@ -30,45 +29,6 @@ include '../main.php'
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/aluminio.jfif">
-
-        <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
-
-        <p class="preço">R$ 10,<sub>95</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
-        
-
-        <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
-    </div>
-
-    <div class="produto2">
-        <img class="figura" src="../../imagens/papelaluminio.jpg">
-
-        <p class="descrição">Papel aluminio 50 metros</p>
-
-        <p class="preço">R$ 10,<sub>00</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
-        
-
-        <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
-    </div>
-
-    <div class="produto3">
-        <img class="figura" src="../../imagens/barrilaluminio.webp">
-
-        <p class="descrição">Barril de Alumínio 30L</p>
-
-        <p class="preço">R$ 200,<sub>99</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
-        
-
-        <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
-    </div>
-
-    <div class="produto4">
         <img class="figura" src="../../imagens/latinha.webp">
 
         <p class="descrição">Latinha 400ml</p>
@@ -80,6 +40,34 @@ include '../main.php'
 
         <p class="endereco">São Paulo, Itaim Paulista | 5/11/2024 9:00</p>
     </div>
+
+    <div class="produto2">
+        <img class="figura" src="../../imagens/latinhacomprida.jpg">
+
+        <p class="descrição">Latinha 350ml</p>
+
+        <p class="preço">R$ 4,<sub>50</sub></p>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        
+
+        <p class="endereco">Franco da Rocha | 15/11/2024 12:00</p>
+    </div>
+
+    <div class="produto3">
+        <img class="figura" src="../../imagens/latamilho.jpg">
+
+        <p class="descrição">Latinha Para Mantimento</p>
+
+        <p class="preço">R$ 7,<sub>99</sub></p>
+        <input type="number" id="qtde" min="1" value="1">
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        
+
+        <p class="endereco">São Paulo, Vila Jacuí | Hoje 13:40</p>
+    </div>
+
+    
     </div>
 
 <?php

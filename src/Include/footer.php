@@ -62,7 +62,8 @@
     }
 
     .footer {
-        padding: 8px;
+        padding: 10px;
+        width: 100%;
     }
 }
 
@@ -74,6 +75,7 @@
 
     .footer {
         font-size: 14px;
+        width: 10px;
     }
 
     .marca{

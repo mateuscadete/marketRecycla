@@ -5,90 +5,74 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Style/Produtos/plastico.css"> <!-- Link para seu CSS -->
-    <title>Plástico - MarketRecycla</title>
+    <link rel="stylesheet" href="../../Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
+    <title>Eletrônicos e Metais - MarketRecycla</title>
 </head>
 
 <body>
-
+    
 <?php
 include '../navbar.php';
 include '../main.php'
 ?>
  
+
     <aside>
-        <h2>Plásticos</h3>
+        <h2>Eletrônicos e Metais</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li >Polietileno Tereftalato (PET)</li></a>
-            <a href="#"><li>Polietileno de Alta Densidade (PEAD)</li></a>
-            <a href="#"><li>Polietileno de Vinila (PVC)</li></a>
-            <a href="#"><li>Polipropileno</li></a>
-            <a href="#"><li>Poliestireno</li></a>
+            <a href="aço.php"><li >Aço</li></a>
+            <a href="cobre.php"><li>Cobre</li></a>
+            <a href="menores.php"><li>Dispositivos Menores</li></a>
+            <a href="maiores.php"><li>Eletrônicos</li></a>         
 
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/garrafapet.jfif">
+        <img class="figura" src="../../imagens/lixeirametal.jpg">
 
-        <p class="descrição">Garrafa PET 1,5L</p>
+        <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
 
-        <p class="preço">R$ 16, <sub>99</sub></p>
-
+        <p class="preço">R$ 270,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(5)">Comprar</button></a
         
 
-        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
+        <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/bandeja.png">
+        <img class="figura" src="../../imagens/mesa.jpg">
 
-        <p class="descrição">Bandeja Pead</p>
+        <p class="descrição">Mesa de Aço</p>
 
-        <p class="preço">R$ 15, <sub>50</sub></p>
+        <p class="preço">R$ 110,<sub>00</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(6)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Pari  | 1/11/2024 17:00</p>
+        <p class="endereco">Guarulhos | Hoje 16:10</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/canopvc.jpeg">
+        <img class="figura" src="../../imagens/bandejaaço.jpg">
 
-        <p class="descrição">Cano PVC 1 Metro</p>
+        <p class="descrição">Bandeja Aço</p>
 
-        <p class="preço">R$ 24, <sub>99</sub> Un</p>
+        <p class="preço">R$ 24,<sub>99</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(15)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Vila Jacuí | 18/11/2024 9:30</p>
+        <p class="endereco">São Paulo, Penha | Hoje 11:40</p>
     </div>
 
-    <div class="produto4">
-        <img class="figura" src="../../imagens/cadeirapolipropileno.webp">
-
-        <p class="descrição">Cadeira Polipropileno</p>
-
-        <p class="preço">R$ 29, <sub>99</sub> Un</p>
-
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
-
-        <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
-    
-    </div>
-
+   
 
     <?php
 include '../footer.php'
 ?>
-    
-
     <script>
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
@@ -117,7 +101,6 @@ include '../footer.php'
             });
         }
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
