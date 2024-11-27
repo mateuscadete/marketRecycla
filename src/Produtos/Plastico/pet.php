@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Style/Produtos/aluminio.css"> <!-- Link para seu CSS -->
-    <title>MarketRecycla</title>
+    <link rel="stylesheet" href="../../Style/Produtos/plastico.css"> <!-- Link para seu CSS -->
+    <title>Plástico - MarketRecycla</title>
 </head>
 
 <body>
@@ -16,78 +16,78 @@ include '../navbar.php';
 include '../main.php'
 ?>
  
-
     <aside>
-        <h2>Alumínios</h3>
+        <h2>Plásticos</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="latasbebidas.php"><li>Latas de Bebidas</li></a>
-            <a href="embalagens.php"><li style="font-weight: bold;">Embalagens de alimentos</li></a>
-            
-            <a href="latoesbarris.php"><li>Latões e Barris</li></a>
-
+            <a href="pet.php"><li >Polietileno Tereftalato (PET)</li></a>
+            <a href="pead.php"><li>Polietileno de Alta Densidade (PEAD)</li></a>
+            <a href="pvc.php"><li>Polietileno de Vinila (PVC)</li></a>
+            <a href="polipropileno.php"><li>Polipropileno</li></a>
+            <a href="poliestireno.php"><li>Poliestireno</li></a>
 
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/latamilho.jpg">
+        <img class="figura" src="../../imagens/garrafapet.jfif">
 
-        <p class="descrição">Latinha Para Mantimento</p>
+        <p class="descrição">Garrafa PET 1,5L</p>
 
-        <p class="preço">R$ 7,<sub>99</sub></p>
+        <p class="preço">R$ 16, <sub>99</sub></p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Vila Jacuí | Hoje 13:40</p>
+        <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/aluminio.jfif">
+        <img class="figura" src="../../imagens/potepet.webp">
 
-        <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
+        <p class="descrição">Pote Pet</p>
 
-        <p class="preço">R$ 10,<sub>95</sub></p>
+        <p class="preço">R$ 10, <sub>50</sub></p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
         
 
-        <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
+        <p class="endereco">Guarulhos  | 5/11/2024 13:00</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/papelaluminio.jpg">
+        <img class="figura" src="../../imagens/potequadrado.webp">
 
-        <p class="descrição">Papel aluminio 50 metros</p>
+        <p class="descrição">Pote Quadrado</p>
 
-        <p class="preço">R$ 10,<sub>00</sub></p>
+        <p class="preço">R$ 9, <sub>99</sub> Un</p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(15)">Comprar</button></a>
         
 
-        <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
+        <p class="endereco">São Paulo, Parque Dom Pedro II | Hoje 15:30</p>
     </div>
 
     <div class="produto4">
-        <img class="figura" src="../../imagens/potesaluminio.png">
+        <img class="figura" src="../../imagens/potecreme.webp">
 
-        <p class="descrição">Potes de Aluminio</p>
+        <p class="descrição">Pote para Creme</p>
 
-        <p class="preço">R$ 30,<sub>00</sub></p>
+        <p class="preço">R$ 5, <sub>99</sub> Un</p>
+
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
-        
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
 
-        <p class="endereco">São Paulo, Jardim Belém | 16/11/2024 15:25</p>
+        <p class="endereco">São Paulo, Tatuapé | 22/11/2024 12:20</p>
+    
     </div>
 
-   
 
-
-    </div>
-
-<?php
+    <?php
 include '../footer.php'
 ?>
+    
 
     <script>
         function adicionarAoCarrinho(idProduto) {
@@ -113,10 +113,11 @@ include '../footer.php'
             })
             .catch(error => {
                 console.error('Erro:', error);
-                console.log('Erro ao adicionar produto ao carrinho');
+                alert('Erro ao adicionar produto ao carrinho');
             });
         }
     </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

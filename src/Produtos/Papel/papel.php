@@ -20,10 +20,10 @@ include '../main.php'
     <aside>
         <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="#"><li >Papelão</li></a>
-            <a href="#"><li>Papel Simples</li></a>
-            <a href="#"><li>Caixas de Embalagem</li></a>
-            <a href="#"><li>Papelão de Produtos Eletrônico</li></a>
+            <a href="papelao.php"><li >Papelão</li></a>
+            <a href="papelsimples.php"><li>Papel Simples</li></a>
+            <a href="caixa.php"><li>Caixas de Embalagem</li></a>
+            <a href="papeleletronico.php"><li>Papelão de Produtos Eletrônico</li></a>
         
     </aside>
 

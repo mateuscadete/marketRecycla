@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../imagens/MR_processed.png" type="image/icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Style/Produtos/eletronicos.css"> <!-- Link para seu CSS -->
-    <title>Eletrônicos e Metais - MarketRecycla</title>
+    <link rel="stylesheet" href="../../Style/Produtos/papel.css"> <!-- Link para seu CSS -->
+    <title>Papel - MarketRecycla</title>
 </head>
 
 <body>
@@ -17,72 +17,43 @@ include '../main.php'
 ?>
  
 
-    <aside>
-        <h2>Eletrônicos e Metais</h3>
+ <aside>
+        <h2>Papel</h3>
             <ul style="font-size: 25px; font-weight: bold;">Categorias</ul>
-            <a href="aço.php"><li >Aço</li></a>
-            <a href="cobre.php"><li>Cobre</li></a>
-            <a href="menores.php"><li>Dispositivos Menores</li></a>
-            <a href="maiores.php"><li>Eletrônicos</li></a>         
-
+            <a href="papelao.php"><li >Papelão</li></a>
+            <a href="papelsimples.php"><li>Papel Simples</li></a>
+            <a href="caixa.php"><li>Caixas de Embalagem</li></a>
+            <a href="papeleletronico.php"><li>Papelão de Produtos Eletrônico</li></a>
+        
     </aside>
 
     <div class="produto">
-        <img class="figura" src="../../imagens/lixeirametal.jpg">
-
-        <p class="descrição">Lixeira 50L Lata de Lixo Americana </p>
-
-        <p class="preço">R$ 270,<sub>00</sub></p>
+        <img class="figura" src="../../imagens/papelão.jpg">
+        <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
+        <p class="preço">R$ 9,<sub>99</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(5)">Comprar</button></a
-        
-
-        <p class="endereco">São Paulo, Av. Juscelino Kubitschek | 21/10/2024 21:00</p>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
+        <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
     </div>
 
     <div class="produto2">
-        <img class="figura" src="../../imagens/mesa.jpg">
-
-        <p class="descrição">Mesa de Aço</p>
-
-        <p class="preço">R$ 110,<sub>00</sub></p>
-
+        <img class="figura" src="../../imagens/papelao.png">
+        <p class="descrição">Papelao A4</p>
+        <p class="preço">R$ 3,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(6)">Comprar</button></a>
-        
-
-        <p class="endereco">Guarulhos | Hoje 16:10</p>
+       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
+        <p class="endereco">São Paulo, Itaim Paulista | 2/10/2024 10:00</p>
     </div>
 
     <div class="produto3">
-        <img class="figura" src="../../imagens/bandejaaço.jpg">
-
-        <p class="descrição">Bandeja Aço</p>
-
-        <p class="preço">R$ 24,<sub>99</sub></p>
-
+        <img class="figura" src="../../imagens/sacolapapelao.webp">
+        <p class="descrição">Sacola Papelão</p>
+        <p class="preço">R$ 5,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
-        
-
-        <p class="endereco">São Paulo, Penha | Hoje 11:40</p>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
+        <p class="endereco">São Paulo, VIla Matilde | 12/10/2024 14:45</p>
     </div>
 
-    <div class="produto4">
-        <img class="figura" src="../../imagens/talheresaço.jpg">
-
-        <p class="descrição">Talheres de Aço</p>
-
-        <p class="preço">R$ 14,<sub>99</sub></p>
-
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(7)">Comprar</button></a>
-        
-
-        <p class="endereco">São Paulo, Casa Verde | Hoje 10:30</p>
-    </div>
-
-   
 
     <?php
 include '../footer.php'
@@ -115,6 +86,7 @@ include '../footer.php'
             });
         }
     </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
