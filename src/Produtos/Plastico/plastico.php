@@ -93,7 +93,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../controllers/adicionar_ao_carrinho.php', {
+            fetch('../../controllers/adicionar_ao_carrinho.php',  {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

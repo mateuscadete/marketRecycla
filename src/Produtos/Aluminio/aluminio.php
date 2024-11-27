@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -35,8 +34,8 @@ include '../main.php'
         <p class="descrição">Embalgem de Alumínio c/ tampa 1150ml 5un</p>
 
         <p class="preço">R$ 10,<sub>95</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
+        <input type="number" id="qtde_4" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(4, 'qtde_4')">Comprar</button>
         
 
         <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
@@ -48,8 +47,8 @@ include '../main.php'
         <p class="descrição">Papel aluminio 50 metros</p>
 
         <p class="preço">R$ 10,<sub>00</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <input type="number" id="qtde_3" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(3, 'qtde_3')">Comprar</button>
         
 
         <p class="endereco">Guarulhos | 11/11/2024 9:23</p>
@@ -61,8 +60,8 @@ include '../main.php'
         <p class="descrição">Barril de Alumínio 30L</p>
 
         <p class="preço">R$ 200,<sub>99</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        <input type="number" id="qtde_2" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(2, 'qtde_2')">Comprar</button>
         
 
         <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
@@ -74,8 +73,8 @@ include '../main.php'
         <p class="descrição">Latinha 400ml</p>
 
         <p class="preço">R$ 5,<sub>00</sub></p>
-        <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(1)">Comprar</button></a>
+        <input type="number" id="qtde_1" min="1" value="1">
+        <button onclick="adicionarAoCarrinho(1, 'qtde_1')">Comprar</button>
         
 
         <p class="endereco">São Paulo, Itaim Paulista | 5/11/2024 9:00</p>
@@ -87,10 +86,10 @@ include '../footer.php'
 ?>
 
     <script>
-        function adicionarAoCarrinho(idProduto) {
-            const quantidade = document.getElementById('qtde').value;
+        function adicionarAoCarrinho(idProduto, qtdeId) {
+            const quantidade = document.getElementById(qtdeId).value;
             
-            fetch('../controllers/adicionar_ao_carrinho.php', {
+            fetch('../../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -103,14 +102,15 @@ include '../footer.php'
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    console.log(data.message);
+                    alert('Produto adicionado ao carrinho!');
+                    window.location.href = '../../carrinho.php';
                 } else {
-                    console.log(data.error);
+                    alert(data.error || 'Erro ao adicionar produto ao carrinho');
                 }
             })
             .catch(error => {
                 console.error('Erro:', error);
-                console.log('Erro ao adicionar produto ao carrinho');
+                alert('Erro ao adicionar produto ao carrinho');
             });
         }
     </script>

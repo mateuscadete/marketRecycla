@@ -35,7 +35,7 @@ include '../main.php'
 
         <p class="preço">R$ 7,<sub>99</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        <a href="../../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Vila Jacuí | Hoje 13:40</p>
@@ -48,7 +48,7 @@ include '../main.php'
 
         <p class="preço">R$ 10,<sub>95</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
+        <a href="../../../carrinho.php"><button onclick="adicionarAoCarrinho(4)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Jd Soraia | Agora 19:29</p>
@@ -80,7 +80,7 @@ include '../footer.php'
         function adicionarAoCarrinho(idProduto) {
             const quantidade = document.getElementById('qtde').value;
             
-            fetch('../controllers/adicionar_ao_carrinho.php', {
+            fetch('/../controllers/adicionar_ao_carrinho.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,9 +1,13 @@
 <?php
-require_once 'Api.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
 require_once 'model/Carrinho.php';
 
+$erro_pagamento = '';
 $carrinho = new App\model\Carrinho();
 $itens = $carrinho->listarCarrinho();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +19,10 @@ $itens = $carrinho->listarCarrinho();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+  const mp = new MercadoPago("YOUR_PUBLIC_KEY");
+</script>
 </head>
 
 <body>
@@ -113,7 +121,14 @@ $itens = $carrinho->listarCarrinho();
 
             <div class="cart-footer">
                 <p class="total">Total R$ <span id="valorTotal">0,00</span></p>
-                <button type="button" class="comprar">Finalizar Compra</button>
+                <?php if (isset($erro_pagamento)): ?>
+                    <div class="alert alert-danger">
+                        <?php echo htmlspecialchars($erro_pagamento); ?>
+                    </div>
+                <?php endif; ?>
+                <form method="POST" action="">
+                <button type="button" onclick="window.location.href='pagamento.php'" class="comprar">Finalizar Compra</button>
+                </form>
             </div>
 
         <?php else: ?>
