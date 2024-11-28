@@ -26,23 +26,20 @@ class Login {
 
     public function entrar() : void {
         if($_SERVER["REQUEST_METHOD"] == "POST") {
-            $nome = htmlspecialchars(trim($_POST["nome"])); // Captura o nome de usuário
-            $senha = htmlspecialchars(trim($_POST["senha"])); // Captura a senha
-    
-            // Prepare a consulta para buscar o usuário
+            $nome = htmlspecialchars(trim($_POST["nome"]));
+            $senha = htmlspecialchars(trim($_POST["senha"]));
+
             $stmt = $this->pdo->prepare("SELECT * FROM usuario WHERE nome = :nome AND senha = :senha");
             $stmt->bindParam(':nome', $nome);
             $stmt->bindParam(':senha', $senha);
             $stmt->execute();
-    
-            // Verifica se o usuário existe
+
             if ($stmt->rowCount() > 0) {
                 $result = $stmt->fetch(\PDO::FETCH_ASSOC);
-    
+
                 // Debug: Verifique o hash da senha
                 var_dump($senha, $result['senha']); // Exibe a senha e o hash
-    
-                // Verifica a senha usando password_verify
+
                 if (password_verify($senha, $result['senha'])) {
                     
                 } else {
@@ -50,7 +47,10 @@ class Login {
                     exit();
                 }
             } else {
-                echo "<h3 style='color: red; font-size: 20px; top: 100%; left: 60%;'>Usuário ou senha incorretos</h3>";
+                // Retorna a mensagem de erro como uma string
+                echo "<div class='errologin'>Usuário ou senha incorretos</div>"
+                
+                ;
             }
         }
     }

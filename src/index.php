@@ -47,13 +47,14 @@ include "Include/navbar.php";
         <button class="cadastrar" type="submit">Entrar</button>
             <br><br>
         
-            <a href="cadastro.php">Fazer Cadastro </a>   
-             </form>
-        <?php if ($mensagem): ?>
-            <div class="message <?php echo strpos($mensagem, 'sucesso') !== false ? 'success' : 'error'; ?>">
+            <a href="cadastro.php">Fazer Cadastro </a>  
+            
+            <?php if ($mensagem): ?>
+            <center class="message <?php echo strpos($mensagem, 'sucesso') !== false ? 'success' : 'error'; ?>">
                 <?php echo htmlspecialchars($mensagem); ?>
-                </div>
+        
         <?php endif; ?>
+             </form>
     </div>
 </body>
 </html>
