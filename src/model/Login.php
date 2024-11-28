@@ -46,7 +46,7 @@ class Login {
                 if (password_verify($senha, $result['senha'])) {
                     
                 } else {
-                    header("Location: principal.html");
+                    header("Location: principal.php");
                     exit();
                 }
             } else {

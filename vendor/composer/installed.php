@@ -3,7 +3,7 @@
         'name' => 'admin/atividade-com-composer-php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '31caa784ef8ee95612631319ce942a5462de76c9',
+        'reference' => '53d7f2c92ccfa6c1c6c2b0c3bed89797bd46e2b4',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'admin/atividade-com-composer-php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '31caa784ef8ee95612631319ce942a5462de76c9',
+            'reference' => '53d7f2c92ccfa6c1c6c2b0c3bed89797bd46e2b4',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
