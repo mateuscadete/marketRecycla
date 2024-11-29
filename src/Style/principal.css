@@ -105,3 +105,75 @@ main {
 li {
     font-weight: bold;
 }
+
+.bemvindo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 400px;
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 20px;
+    position: absolute;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+span {
+    background-color: green;
+    color: white;
+    width: 10px;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 400px;
+
+}
+
+.carousel-inner{
+    height:25em;
+
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent !important; /* Remove o fundo cinza */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: transparent !important; /* Garante que o hover não adicione cor */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1; /* Garante que o ícone fique sempre visível */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important; /* Remove o fade-out no hover */
+}
+
+h5{
+   
+    color:white;
+    position:relative:
+    margin-top:50%;
+}
+
+p{
+    color:black;
+    
+}
+
+.paginas {
+    width: 50%;
+    position:relative;
+    left:45%;
+    margin-top:50px;
+    
+}
