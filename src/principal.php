@@ -29,26 +29,26 @@ include "Include/main.php";
     <div class="carousel-item active">
       <img src="imagens/empresa.webp" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>O MarketRecycla é o futuro da Sustentabilidade</h5>
-        <p >Nosso empresa fornece uma estrutura satisfatória para o consumidor</p>
+        <h5 style="color:#275C39; font-weight:bold; white-space: nowrap; ;">MarketRecycla & Sustentabilidade</h5>
+        <p  style="color:#275C39; font-weight:bold;"></p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="imagens/importancia.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5 style="color:white; font-weight:bold">Reciclagem</h5>
+        <p style="color:white; font-weight:bold">Saiba a importância da reciclagem.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="imagens/comunidade.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      <div class="carousel-caption ">
+        <h5 Style= "color:green; font-weight:bold ">Reutilização</h5>
+        <p Style="color:green; font-weight:bold">O que fazer com materias já usados?</p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" >
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     
   </button>
