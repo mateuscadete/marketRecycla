@@ -32,7 +32,7 @@ include '../main.php'
         <p class="descrição">Caixa de Embalagem</p>
         <p class="preço">R$ 10,<sub>50</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
         <p class="endereco">São Paulo, Vila Boturussu | 19/11/2024 10:00</p>
     </div>
 
@@ -41,7 +41,7 @@ include '../main.php'
         <p class="descrição">Caixa de Fruta</p>
         <p class="preço">R$ 22,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
         <p class="endereco">São Paulo, Santana | 21/10/2024 8:30</p>
     </div>
 
@@ -50,7 +50,7 @@ include '../main.php'
         <p class="descrição">Caixa de Leite</p>
         <p class="preço">R$ 3,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
-       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
+       <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(11)">Comprar</button></a>
         <p class="endereco">São Paulo, Belém | 13/11/2024 9:00</p>
     </div>
 
@@ -59,7 +59,7 @@ include '../main.php'
         <p class="descrição">Caixa de Sapato</p>
         <p class="preço">R$ 20,<sub>50</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
         <p class="endereco">São Paulo, Vila Maria | 31/10/2024 13:00</p>
     </div>
 

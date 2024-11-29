@@ -88,7 +88,7 @@
             <br>
             <a href="#">Termos de Uso</a>  
             <br>
-            <a href="../contato.php">Contato</a>       
+            <a href="https://github.com/mateuscadete/marketrecycla" target="_blank">GitHub do Market Recycla</a>       
             </div>
 
         

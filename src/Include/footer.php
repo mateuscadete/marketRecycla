@@ -32,7 +32,7 @@
             padding: 20px 0;
             width: 100%;
             
-            margin-top: 300%;
+            margin-top: 280%;
             
         }
         .footer a {
@@ -104,7 +104,7 @@
             <br>
             <a href="#">Termos de Uso</a>  
             <br>
-            <a href="../contato.php">Contato</a>       
+            <a href="https://github.com/mateuscadete/marketrecycla" target="_blank">GitHub do Market Recycla</a>       
             </div>
 
         

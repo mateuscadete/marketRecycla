@@ -105,3 +105,302 @@ main {
 li {
     font-weight: bold;
 }
+
+.bemvindo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 400px;
+    width: 500px;
+    margin-top: 100px;
+    margin-left: 15px;
+    padding: 20px;
+    position: absolute;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+span {
+    background-color: green;
+    color: white;
+    width: 10px;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    height: 400px;
+
+}
+
+.carousel-inner {
+    height: 25em;
+
+
+}
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent;
+    border: transparent;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: transparent;
+    border: transparent;
+}
+
+
+
+
+.paginas {
+    width: 50%;
+    position: relative;
+    left: 45%;
+    margin-top: 50px;
+
+}
+
+img:hover {
+    box-shadow: 0px 15px 30px rgba(15, 78, 25, 0.37);
+
+}
+
+.produto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 400px;
+    width: 500px;
+    margin-top: 120px;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+
+}
+
+.imagem {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+.imagem:hover {
+    box-shadow: 0 4px 20px rgba(15, 78, 25, 0.37);
+
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    margin: 0;
+
+}
+
+.carousel-caption h5 {
+    margin-top: 10px;
+
+}
+
+.carousel-caption p {
+    margin-top: 10px;
+    left: 55%;
+
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .bemvindo h1 {
+        font-size: 1.8rem;
+    }
+
+    .bemvindo p {
+        left: 70%;
+        font-size: 1.1rem;
+    }
+
+    .paginas .carousel-caption h5,
+    .paginas .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .produto h2 {
+        font-size: 1.6rem;
+    }
+
+    .produto p {
+        font-size: 1.1rem;
+    }
+
+    .carousel slide {
+        height: 20%;
+    }
+
+    .bemvindo {
+        left: 27%;
+    }
+
+    .paginas {
+
+        left: 30%;
+        margin-top: 45%;
+    }
+
+    .produto {
+        left: 30%;
+        top: 200%;
+    }
+
+    .imagem {
+        left: 25%;
+        top: 270%;
+    }
+}
+
+@media (max-width: 750px) {
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .bemvindo h1 {
+        font-size: 1.8rem;
+    }
+
+    .bemvindo p {
+        left: 70%;
+        font-size: 1.1rem;
+    }
+
+    .paginas .carousel-caption h5,
+    .paginas .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .produto h2 {
+        font-size: 1.6rem;
+    }
+
+    .produto p {
+        font-size: 1.1rem;
+    }
+
+    .carousel {
+        height: 10%;
+    }
+
+    .bemvindo {
+        padding-right: 80px;
+        height: 300px;
+        width: 400px;
+        position: absolute;
+        margin-top: -100px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: 5px;
+    }
+
+    .paginas {
+        height: 50px;
+        left: 25%;
+        margin-top: 40%;
+        margin-bottom: 100%;
+        width: 60%;
+
+    }
+
+    .produto {
+        height: 300px;
+        width: 400px;
+        left: 25%;
+        top: 170%;
+    }
+
+    .imagem {
+        left: 15%;
+        top: 240%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .bemvindo h1 {
+        font-size: 1.8rem;
+    }
+
+    .bemvindo p {
+        left: 70%;
+        font-size: 1.1rem;
+    }
+
+    .paginas .carousel-caption h5,
+    .paginas .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .produto h2 {
+        font-size: 1.6rem;
+    }
+
+    .produto p {
+        font-size: 1.1rem;
+    }
+
+    .carousel {
+        height: 10%;
+    }
+
+    .bemvindo {
+        padding-right: 80px;
+        height: 300px;
+        width: 500px;
+        position: absolute;
+        margin-top: -100px;
+        left: -1%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: 5px;
+    }
+
+    .paginas {
+        height: 50px;
+        left: 10%;
+        margin-top: 40%;
+        margin-bottom: 100%;
+        width: 80%;
+
+    }
+
+    .produto {
+        height: 300px;
+        width: 400px;
+        left: 1%;
+        top: 170%;
+    }
+
+    .imagem {
+        left: -7%;
+        top: 240%;
+    }
+}
