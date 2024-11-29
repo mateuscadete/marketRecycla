@@ -17,7 +17,7 @@ class Login {
     public function __construct($login = null) {
         $this->login = $login;
         try {
-            $this->pdo = new \PDO('mysql:host=localhost;dbname=db_name', 'root', '');
+            $this->pdo = ConnectionFactory::getConnection();
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();
