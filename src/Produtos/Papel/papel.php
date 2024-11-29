@@ -32,7 +32,7 @@ include '../main.php'
         <p class="descrição">Papelão Ondulado 1,20 X 30 Metros</p>
         <p class="preço">R$ 9,<sub>99</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
+        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(9)">Comprar</button></a>     
         <p class="endereco">São Paulo, Ermelino Matarazzo | 21/10/2024 21:22</p>
     </div>
 
@@ -41,7 +41,7 @@ include '../main.php'
         <p class="descrição">Jornais Usados</p>
         <p class="preço">R$ 0,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
         <p class="endereco">Guarulhos | Hoje 8:30</p>
     </div>
 
@@ -50,7 +50,7 @@ include '../main.php'
         <p class="descrição">Sacola Papelão</p>
         <p class="preço">R$ 5,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
-       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
+       <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(11)">Comprar</button></a>
         <p class="endereco">São Paulo, Vila Matilde | 12/10/2024 14:45</p>
     </div>
 
@@ -59,7 +59,7 @@ include '../main.php'
         <p class="descrição">Caixa de Embalagem</p>
         <p class="preço">R$ 10,<sub>50</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(12)">Comprar</button></a>    
         <p class="endereco">São Paulo, VIla Boturussu | 19/11/2024 10:00</p>
     </div>
 

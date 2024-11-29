@@ -37,7 +37,7 @@ include '../main.php'
 
         
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(17)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(17)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Jaçana | 15/10/2024 10:12</p>
@@ -53,7 +53,7 @@ include '../main.php'
 
        
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(19)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(19)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Ermelino Matarazzp | Hoje 15:30</p>
@@ -68,7 +68,7 @@ include '../main.php'
 
        
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(20)">Comprar</button></a>
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(20)">Comprar</button></a>
         
 
         <p class="endereco">Itaquaquecetuba | 15/11/2024 16:47</p>

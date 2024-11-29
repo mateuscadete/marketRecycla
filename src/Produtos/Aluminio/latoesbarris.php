@@ -35,7 +35,7 @@ include '../main.php'
 
         <p class="preço">R$ 200,<sub>99</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(2)">Comprar</button></a>
+        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(2)">Comprar</button></a>
         <p class="endereco">São Paulo, Francisco Morato | 2/10/2024 13:30</p>
     </div>
 
@@ -44,7 +44,7 @@ include '../main.php'
         <p class="descrição">Barril Heineken 250l</p>
         <p class="preço">R$ 220,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(3)">Comprar</button></a>
         <p class="endereco">São Paulo, Brás | 26/11/2024 8:30</p>
     </div>
 
@@ -55,7 +55,7 @@ include '../main.php'
 
         <p class="preço">R$ 15,<sub>00</sub></p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(3)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(3)">Comprar</button></a>
         
 
         <p class="endereco">Guarulhos | 30/10/2024 | 16:45</p>

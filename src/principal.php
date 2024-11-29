@@ -1,19 +1,3 @@
-<?php
-session_start();
-
-// Verifica se precisa limpar o carrinho
-if (isset($_GET['clear']) && $_GET['clear'] == '1') {
-    // Garante que o carrinho esteja vazio
-    if (isset($_SESSION['carrinho'])) {
-        $_SESSION['carrinho'] = array();
-        unset($_SESSION['carrinho']);
-    }
-    // Redireciona para remover os parâmetros da URL
-    header('Location: principal.php');
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -42,27 +26,34 @@ include "Include/main.php";
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
  
   <div class="carousel-inner">
+    <a href="https://www.ecommercebrasil.com.br/artigos/e-commerce-sustentavel-pratica" target="_blank">
     <div class="carousel-item active">
-      <img src="imagens/empresa.webp" class="d-block w-100" alt="...">
+      <img src="imagens/empresa.webp" class="d-block w-100" alt="e-commerce sustentável">
       <div class="carousel-caption d-none d-md-block">
         <h5 style="color:#275C39; font-weight:bold; white-space: nowrap; ;">MarketRecycla & Sustentabilidade</h5>
         <p  style="color:#275C39; font-weight:bold;"></p>
       </div>
     </div>
+    </a>
+    <a href="https://blog.brkambiental.com.br/reciclagem/"target="_blank">
     <div class="carousel-item">
-      <img src="imagens/importancia.jpg" class="d-block w-100" alt="...">
+      <img src="imagens/importancia.jpg" class="d-block w-100" alt="Reciclagem">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style="color:white; font-weight:bold">Reciclagem</h5>
-        <p style="color:white; font-weight:bold">Saiba a importância da reciclagem.</p>
+        <h5 style="color:green; font-weight:bold">Reciclagem</h5>
+        <p style="color:green; font-weight:bold">Conheça a importância de reciclar.</p>
       </div>
     </div>
+    </a>
+
+    <a href="https://www.ecycle.com.br/como-reciclar/"target="_blank">
     <div class="carousel-item">
-      <img src="imagens/comunidade.jpg" class="d-block w-100" alt="...">
+      <img src="imagens/comunidade.jpg" class="d-block w-100" alt="Reutilização">
       <div class="carousel-caption ">
         <h5 Style= "color:green; font-weight:bold ">Reutilização</h5>
         <p Style="color:green; font-weight:bold">O que fazer com materias já usados?</p>
       </div>
     </div>
+    </a>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,20 +89,6 @@ include "Include/footer.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script>
-    if (localStorage.getItem('limpar_carrinho') === 'true') {
-        fetch('controllers/limpar_carrinho.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(() => {
-            localStorage.removeItem('limpar_carrinho');
-            location.reload();
-        });
-    }
-    </script>
 </body>
 
 </html>
