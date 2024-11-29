@@ -11,7 +11,7 @@ class Carrinho {
     public function __construct() {
         try {
             // Configuração para conexão com o banco de dados
-            $this->pdo = ConnectionFactory::getConnection();
+            $this->pdo = new \PDO('mysql:host=localhost;dbname=db_name', 'root', '');
             $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();

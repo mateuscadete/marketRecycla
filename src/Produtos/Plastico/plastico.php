@@ -35,7 +35,7 @@ include '../main.php'
         <p class="preço">R$ 16, <sub>99</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php">  <button class="comprar" onclick="adicionarAoCarrinho(13)">Comprar</button></a>
+        <a href="../../carrinho.php">  <button onclick="adicionarAoCarrinho(13)">Comprar</button></a>
         
 
         <p class="endereco">Mogi das Cruzes, Vila Oliveira | Hoje 16:22</p>
@@ -49,7 +49,7 @@ include '../main.php'
         <p class="preço">R$ 15, <sub>50</sub></p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(14)">Comprar</button></a>
+        <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(14)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Pari  | 1/11/2024 17:00</p>
@@ -63,7 +63,7 @@ include '../main.php'
         <p class="preço">R$ 24, <sub>99</sub> Un</p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(15)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(15)">Comprar</button></a>
         
 
         <p class="endereco">São Paulo, Vila Jacuí | 18/11/2024 9:30</p>
@@ -77,7 +77,7 @@ include '../main.php'
         <p class="preço">R$ 29, <sub>99</sub> Un</p>
 
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(16)">Comprar</button></a>
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(16)">Comprar</button></a>
 
         <p class="endereco">Guarulhos | 27/10/2024 19:50</p>
     

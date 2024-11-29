@@ -32,7 +32,7 @@ include '../main.php'
         <p class="descrição">Caixa de Celular</p>
         <p class="preço">R$ 11,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
         <p class="endereco">São Paulo, Santana | 21/10/2024 8:30</p>
     </div>
 
@@ -41,7 +41,7 @@ include '../main.php'
         <p class="descrição">Caixinha Quadrada</p>
         <p class="preço">R$ 10,<sub>99</sub>un</p>
         <input type="number" id="qtde" min="1" value="1">
-        <a href="../../carrinho.php"><button class="comprar" onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
+        <a href="../../carrinho.php"><button onclick="adicionarAoCarrinho(10)">Comprar</button></a>       
         <p class="endereco">São Paulo, São Miguel | Hoje 10:30</p>
     </div>
 
@@ -50,7 +50,7 @@ include '../main.php'
         <p class="descrição">Caixa Embalagem</p>
         <p class="preço">R$ 5,<sub>00</sub> un</p>
         <input type="number" id="qtde" min="1" value="1">
-       <a href="../../carrinho.php"> <button class="comprar" onclick="adicionarAoCarrinho(11)">Comprar</button></a>
+       <a href="../../carrinho.php"> <button onclick="adicionarAoCarrinho(11)">Comprar</button></a>
         <p class="endereco">São Paulo, Butantã | 25/10/2024 9:25</p>
     </div>
 
