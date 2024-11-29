@@ -78,7 +78,6 @@ $itens = $carrinho->listarCarrinho();
         </div>
 </nav>
     <!-- Mantenha sua navbar existente aqui -->
-    <?php include_once "navbar.php"; ?>
 
     <div class="cart-container">
         <div class="header">Meu Carrinho 🛒</div>
