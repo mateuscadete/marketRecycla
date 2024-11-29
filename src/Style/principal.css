@@ -132,48 +132,59 @@ span {
 
 }
 
-.carousel-inner{
-    height:25em;
+.carousel-inner {
+    height: 25em;
 
 
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: transparent !important; /* Remove o fundo cinza */
-}
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: transparent !important; /* Garante que o hover não adicione cor */
-}
+
 
 .carousel-control-prev,
 .carousel-control-next {
-    opacity: 1; /* Garante que o ícone fique sempre visível */
+    background-color: transparent;
+    border: transparent;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    opacity: 1 !important; /* Remove o fade-out no hover */
+    background-color: transparent;
+    border: transparent;
 }
 
-h5{
-   
-    color:white;
-    position:relative:
-    margin-top:50%;
+h5 {
+
+    color: white;
+    position: relative;
+    margin-top: 50%;
 }
 
-p{
-    color:black;
-    
+p {
+    color: black;
+
 }
 
 .paginas {
     width: 50%;
-    position:relative;
-    left:45%;
-    margin-top:50px;
-    
+    position: relative;
+    left: 45%;
+    margin-top: 50px;
+
+}
+
+.produto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 400px;
+    width: 500px;
+    margin-top: 120px;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+
+}
+
+.imagem {
+    margin-top: 100px;
+    margin-left: 70px;
 }

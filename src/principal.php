@@ -19,7 +19,7 @@ include "Include/main.php";
 
 <div class="bemvindo">
     <h1>Bem Vindo ao <span>MarketRecycla!</span></h1>
-    <p>Uma empresa que conecta você à sustentabilidade ambiental e ao desenvolvimento de uma sociedade consciente com os cuidados da natureza</p>
+    <p>Uma empresa que conecta você à sustentabilidade ambiental e ao desenvolvimento de uma sociedade consciente com os cuidados da natureza através da reciclagem e reutilzação.</p>
 </div>
 
 <div class="paginas">
@@ -41,14 +41,14 @@ include "Include/main.php";
       </div>
     </div>
     <div class="carousel-item">
-      <img src="comunidade.jpg" class="d-block w-100" alt="...">
+      <img src="imagens/comunidade.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     
   </button>
@@ -60,7 +60,16 @@ include "Include/main.php";
 
 </div>
 
+<div class="produto">
+  <h2>Na Prática</h2>
+  <p>A compra de produtos que já estão usados, com o propósito de serem descartados, permite que você
+    os reutilize para diversos fins, seja como um objeto de decoração, uso domestico ou até mesmo para algum projeto de feira de ciências.
+    Além disso, você estará contribuindo para a preservação do meio ambiente, evitando que esses produtos sejam descartados de forma incorreta, vendo ao mesmo tempo como esse ramo gera lucro e empregos para a sociedade.</p>
+</div>
 
+<div class="imagem">
+<img src="imagens/exemplo.jpg" alt="Exemplo de Reutilização">
+</div>
 
 <?php
 include "Include/footer.php";
